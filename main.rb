@@ -1,4 +1,4 @@
-$: << File.dirname(__FILE__)
+$: << File.expand_path(File.join(File.dirname(__FILE__), "lib"))
 
 require 'ierail'
 
@@ -15,8 +15,8 @@ puts ir.trains
 
 # What's the story out in Bray station?
 #
-puts ir.station("BRAY")
+puts ir.station("Glenageary")
 
 # Trains due in and out of Bray in the next 30 minutes
 #
-puts ir.station_times("BRAY", 30)
+puts ir.station_times("Glenageary", 30)
