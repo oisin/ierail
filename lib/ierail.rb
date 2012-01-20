@@ -11,8 +11,8 @@ class IERail
     
     def initialize(url, array_name, object_name)
       @ws_url = url
-      @ws_array_name = array_name
-      @ws_object_name = object_name
+      @ws_array_name = array_name.downcase
+      @ws_object_name = object_name.downcase
     end
       
     def response
@@ -52,43 +52,93 @@ class IERail
     end
   end
   
-  class GetStations < IERailGet
-    def initialize
-      super("getAllStationsXML?", "arrayofobjstation", "objstation")
-    end
-  end
-  
-  class GetTrains < IERailGet
-    def initialize
-      super("getCurrentTrainsXML?", "arrayofobjtrainpositions", "objtrainpositions")
-    end
-  end
-  
-  class GetStationData < IERailGet
-    def initialize(name)
-      super("getStationDataByNameXML?StationDesc=#{name}", "arrayofobjstationdata", "objstationdata")
-    end
-  end
-  
-  class GetStationTimes < IERailGet
-    def initialize(name, mins)
-      super("getStationDataByNameXML_withNumMins?StationDesc=#{name}&NumMins=#{mins}", "arrayofobjstationdata", "objstationdata")
-    end
-  end
-  
+  # Get ALL the stations!
+  # Returns array of hashes, and each hash looks like
+  # {
+  #    "StationDesc"=>"Belfast Central", 
+  #    "StationLatitude"=>"54.6123", 
+  #    "StationLongitude"=>"-5.91744", 
+  #    "StationCode"=>"BFSTC", 
+  #    "StationId"=>"228"
+  #  }
+  # Returns empty array if no data, but that would be odd.
+  #
   def stations
-    GetStations.new.response
+    ier = IERailGet.new("getAllStationsXML?", "arrayofobjstation", "objstation")
+    ier.response
   end
   
+  # Get ALL the trains! That are on the go at the moment.
+  # Returns array of hashes, and each hash looks like
+  #  {
+  #    "TrainStatus"=>"R", 
+  #    "TrainLatitude"=>"53.3509", 
+  #    "TrainLongitude"=>"-6.23929", 
+  #    "TrainCode"=>"D303", 
+  #    "TrainDate"=>"20 Jan 2012", 
+  #    "PublicMessage"=>"D303\\n09:30 - Docklands to M3 Parkway (1 mins late)\\nDeparted Docklands next stop Broombridge", 
+  #    "Direction"=>"Northbound"
+  #  }
+  # Returns empty array if no data
+  #
   def trains
-    GetTrains.new.response
+    ier = IERailGet.new("getCurrentTrainsXML?", "arrayofobjtrainpositions", "objtrainpositions")
+    ier.response
   end
   
+  # Get train information for a particular station, by station name. This gives data on trains thru that station
+  # Returns array of hashes, and each hash looks like
+  # {
+  #   "Servertime"=>"2012-01-20T10:03:33.777", 
+  #   "Traincode"=>"E909", 
+  #   "Stationfullname"=>"Glenageary", 
+  #   "Stationcode"=>"GLGRY", 
+  #   "Querytime"=>"10:03:33", 
+  #   "Traindate"=>"20 Jan 2012", 
+  #   "Origin"=>"Bray", 
+  #   "Destination"=>"Howth", 
+  #   "Origintime"=>"09:55", 
+  #   "Destinationtime"=>"11:03", 
+  #   "Status"=>"En Route", 
+  #   "Lastlocation"=>"Arrived Killiney", 
+  #   "Duein"=>"6", 
+  #   "Late"=>"0", 
+  #   "Exparrival"=>"10:09", 
+  #   "Expdepart"=>"10:09", 
+  #   "Scharrival"=>"10:09", 
+  #   "Schdepart"=>"10:09", "
+  #   "Direction"=>"Northbound", 
+  #   "Traintype"=>"DART", 
+  #   "Locationtype"=>"S"
+  # }
+  # Returns empty array if no data.
+  #
   def station(name)
-    GetStationData.new(name).response
+    ier = IERailGet.new("getStationDataByNameXML?StationDesc=#{name}", "arrayofobjstationdata", "objstationdata")
+    ier.response
   end
   
+  # Get train information for a particular station, by station name, within the time period in minutes from now. 
+  # This gives data on trains thru that station.
+  # Returns array of hashes, and each hash looks like the one for IERail#station
+  # Will return an empty array if no information.
+  #
   def station_times(name, mins)
-    GetStationTimes.new(name, mins).response
+    ier = IERailGet.new("getStationDataByNameXML_withNumMins?StationDesc=#{name}&NumMins=#{mins}", "arrayofobjstationdata", "objstationdata")
+    ier.response
+  end
+  
+  # Find station codes and descriptions using a partial string to match the station name
+  # Returns an array of hashes that looks like
+  # {
+  #    "StationDesc_sp"=>"Sandycove", 
+  #    "StationDesc"=>"Glasthule (Sandycove )", 
+  #    "StationCode"=>"SCOVE"
+  #  }
+  # or an empty array if no matches.
+  #
+  def find_station(partial)
+    ier = IERailGet.new("getStationsFilterXML?StationText=#{partial}", "ArrayOfObjStationFilter", "objStationFilter")
+    ier.response    
   end
 end
