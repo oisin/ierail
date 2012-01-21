@@ -1,6 +1,10 @@
 require 'rest-client'
 require 'nokogiri'
 
+require 'train'
+require 'station'
+require 'station_data'
+
 class IERail
   
   URL = "http://api.irishrail.ie/realtime/realtime.asmx"
@@ -53,92 +57,109 @@ class IERail
   end
   
   # Get ALL the stations!
-  # Returns array of hashes, and each hash looks like
+  # Returns array of Station objects, and each object responds to
   # {
-  #    "StationDesc"=>"Belfast Central", 
-  #    "StationLatitude"=>"54.6123", 
-  #    "StationLongitude"=>"-5.91744", 
-  #    "StationCode"=>"BFSTC", 
-  #    "StationId"=>"228"
+  #    obj#name =>"Belfast Central", 
+  #    obj#location =>["-5.91744", "54.6123"] 
+  #    obj#code =>"BFSTC", 
+  #    obj#id =>"228"
   #  }
   # Returns empty array if no data, but that would be odd.
   #
   def stations
     ier = IERailGet.new("getAllStationsXML?", "arrayofobjstation", "objstation")
-    ier.response
+    retval = []
+    ier.response.each do |s|
+      retval << Station.new(s)
+    end
+    retval
   end
   
   # Get ALL the trains! That are on the go at the moment.
-  # Returns array of hashes, and each hash looks like
+  # Returns array of Train objects, and each object responds to
   #  {
-  #    "TrainStatus"=>"R", 
-  #    "TrainLatitude"=>"53.3509", 
-  #    "TrainLongitude"=>"-6.23929", 
-  #    "TrainCode"=>"D303", 
-  #    "TrainDate"=>"20 Jan 2012", 
-  #    "PublicMessage"=>"D303\\n09:30 - Docklands to M3 Parkway (1 mins late)\\nDeparted Docklands next stop Broombridge", 
-  #    "Direction"=>"Northbound"
+  #    obj#status =>"R", 
+  #    obj#location =>["-6.23929, ""53.3509"] 
+  #    obj#code =>"D303", 
+  #    obj#date =>"20 Jan 2012", 
+  #    obj#message =>"D303\\n09:30 - Docklands to M3 Parkway (1 mins late)\\nDeparted Docklands next stop Broombridge", 
+  #    obj#direction =>"Northbound"
   #  }
   # Returns empty array if no data
   #
   def trains
     ier = IERailGet.new("getCurrentTrainsXML?", "arrayofobjtrainpositions", "objtrainpositions")
-    ier.response
+    retval = []
+    ier.response.each do |t|
+      retval << Train.new(t)
+    end
+    retval
   end
   
   # Get train information for a particular station, by station name. This gives data on trains thru that station
-  # Returns array of hashes, and each hash looks like
+  # Returns array of StationData objects, and each object responds to
   # {
-  #   "Servertime"=>"2012-01-20T10:03:33.777", 
-  #   "Traincode"=>"E909", 
-  #   "Stationfullname"=>"Glenageary", 
-  #   "Stationcode"=>"GLGRY", 
-  #   "Querytime"=>"10:03:33", 
-  #   "Traindate"=>"20 Jan 2012", 
-  #   "Origin"=>"Bray", 
-  #   "Destination"=>"Howth", 
-  #   "Origintime"=>"09:55", 
-  #   "Destinationtime"=>"11:03", 
-  #   "Status"=>"En Route", 
-  #   "Lastlocation"=>"Arrived Killiney", 
-  #   "Duein"=>"6", 
-  #   "Late"=>"0", 
-  #   "Exparrival"=>"10:09", 
-  #   "Expdepart"=>"10:09", 
-  #   "Scharrival"=>"10:09", 
-  #   "Schdepart"=>"10:09", "
-  #   "Direction"=>"Northbound", 
-  #   "Traintype"=>"DART", 
-  #   "Locationtype"=>"S"
+  #   obj#servertime =>"2012-01-20T10:03:33.777", 
+  #   obj#traincode =>"E909", 
+  #   obj#name / obj#station_name =>"Glenageary", 
+  #   obj#code / obj#station_code =>"GLGRY", 
+  #   obj#query_time =>"10:03:33", 
+  #   obj#train_date =>"20 Jan 2012", 
+  #   obj#origin => {:name => "Bray", :time => "09:55"} 
+  #   obj#destination => {:name => "Howth", :time => "11:03"} 
+  #   obj#status =>"En Route", 
+  #   obj#last_location =>"Arrived Killiney", 
+  #   obj#duein / obj#due_in =>"6", 
+  #   obj#late =>"0", 
+  #   obj#late? => 0 / 1
+  #   obj#arrival => {:scheduled => "10:09", :expected => "10:09"}
+  #   obj#departure => {:scheduled => "10:09", :expected => "10:09"}
+  #   obj#direction => "Northbound",
+  #   obj#train_type => "DART", 
   # }
   # Returns empty array if no data.
   #
   def station(name)
     ier = IERailGet.new("getStationDataByNameXML?StationDesc=#{name}", "arrayofobjstationdata", "objstationdata")
-    ier.response
+    retval = []
+    ier.response.each do |sd|
+      retval << StationData.new(sd)
+    end
+    retval
   end
   
   # Get train information for a particular station, by station name, within the time period in minutes from now. 
   # This gives data on trains thru that station.
-  # Returns array of hashes, and each hash looks like the one for IERail#station
+  # Returns array of StationData objects, and each obj looks like the one for IERail#station
   # Will return an empty array if no information.
   #
   def station_times(name, mins)
     ier = IERailGet.new("getStationDataByNameXML_withNumMins?StationDesc=#{name}&NumMins=#{mins}", "arrayofobjstationdata", "objstationdata")
-    ier.response
+    retval = []
+    ier.response.each do |sd|
+      retval << StationData.new(sd)
+    end
+    retval
   end
   
   # Find station codes and descriptions using a partial string to match the station name
-  # Returns an array of hashes that looks like
+  # Returns an array of Structs that each respond to
   # {
-  #    "StationDesc_sp"=>"Sandycove", 
-  #    "StationDesc"=>"Glasthule (Sandycove )", 
-  #    "StationCode"=>"SCOVE"
+  #    struct#name =>"Sandycove", 
+  #    struct#description =>"Glasthule (Sandycove )", 
+  #    struct#code =>"SCOVE"
   #  }
   # or an empty array if no matches.
   #
   def find_station(partial)
     ier = IERailGet.new("getStationsFilterXML?StationText=#{partial}", "ArrayOfObjStationFilter", "objStationFilter")
-    ier.response    
+    Struct.new("Station", :name, :description, :code)
+    retval = []
+    ier.response.each do |st|
+       retval << Struct::Station.new(st['StationDesc_sp'],
+                                     st['StationDesc'],
+                                     st['StationCode'])
+    end
+    retval
   end
 end
