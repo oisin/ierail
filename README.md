@@ -6,8 +6,4 @@ It's a trivial wrapper for the Irish Rail real time (whut?) train times system, 
 
 Check the **main.rb** for sample usage.
 
-Pull requests welcome, because there's damn all in it at the moment.
-
-### Testing
-
-Yes, yes indeed.
+Pull requests welcome, because there's damn all in it at the moment. Please accompany the pull request with an appropriate test.
