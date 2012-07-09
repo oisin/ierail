@@ -162,4 +162,43 @@ class IERail
     end
     retval
   end
+
+  # Get direction-specific train information for a particular station, by station name. 
+  # This gives data on trains through that station
+  # Returns array of StationData objects, and each object responds to
+  # {
+  #   obj#servertime =>"2012-01-20T10:03:33.777", 
+  #   obj#traincode =>"E909", 
+  #   obj#name / obj#station_name =>"Glenageary", 
+  #   obj#code / obj#station_code =>"GLGRY", 
+  #   obj#query_time =>"10:03:33", 
+  #   obj#train_date =>"20 Jan 2012", 
+  #   obj#origin => {:name => "Bray", :time => "09:55"} 
+  #   obj#destination => {:name => "Howth", :time => "11:03"} 
+  #   obj#status =>"En Route", 
+  #   obj#last_location =>"Arrived Killiney", 
+  #   obj#duein / obj#due_in =>"6", 
+  #   obj#late =>"0", 
+  #   obj#late? => 0 / 1
+  #   obj#arrival => {:scheduled => "10:09", :expected => "10:09"}
+  #   obj#departure => {:scheduled => "10:09", :expected => "10:09"}
+  #   obj#direction => "Northbound",
+  #   obj#train_type => "DART", 
+  # }
+  # Returns empty array if no data.
+  #
+
+  def method_missing(name, *args, &block)
+    # Only handle *bound_from (e.g northbound_from / southbound_from)
+    if name =~ /bound_from/
+      direction = name.to_s.split('_').first.capitalize
+
+      ier = IERailGet.new("getStationDataByNameXML?StationDesc=#{args.first}", "arrayofobjstationdata", "objstationdata")
+      retval = []
+      ier.response.each do |sd|
+        retval << StationData.new(sd) if sd['Direction'] == direction
+      end
+      retval
+    end
+  end
 end
