@@ -18,10 +18,7 @@ ir = IERail.new
 
 ### Find all Southbound trains serving Clongriffin station
 
-<pre><code>trains = ir.station('clongriffin')
-
-trains.each { |t| puts t.inspect if t.direction == 'Southbound' }
-</code></pre>
+<pre><code>trains = ir.southbound_from('clongriffin')</code></pre>
 
 ### Find all trains serving Clongriffin in the next 30 minutes
 
