@@ -1,5 +1,6 @@
 require 'rest-client'
 require 'nokogiri'
+require 'uri'
 
 require 'train'
 require 'station'
@@ -14,7 +15,7 @@ class IERail
     attr_reader :result
     
     def initialize(url, array_name, object_name)
-      @ws_url = url
+      @ws_url = URI.encode(url)
       @ws_array_name = array_name.downcase
       @ws_object_name = object_name.downcase
     end
