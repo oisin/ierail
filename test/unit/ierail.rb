@@ -6,7 +6,7 @@ require 'ierail'
 class IERailTest < MiniTest::Unit::TestCase
   def setup
     ir = IERail.new
-    @northbound_train = ir.northbound_from('Clongriffin').sample
+    @northbound_train = ir.northbound_from('Howth Junction').sample
     @southbound_train = ir.southbound_from('Clongriffin').sample
     @nonexistant      = ir.westbound_from('Clongriffin')
   end
