@@ -1,10 +1,12 @@
 require 'rest-client'
 require 'nokogiri'
 require 'uri'
+require 'time'
 
 require 'train'
 require 'station'
 require 'station_data'
+require 'core_ext'
 
 class IERail
   
