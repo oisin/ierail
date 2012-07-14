@@ -1,7 +1,7 @@
 class StationData
   attr_reader :servertime, :traincode, :station_name, :station_code,
               :status, :last_location, :duein, :late, 
-              :train_type, :direction, :query_time, :train_date
+              :train_type, :direction, :query_time, :train_date, :expdepart
 
   def initialize hash
     @servertime       = hash['Servertime']
