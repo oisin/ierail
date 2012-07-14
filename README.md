@@ -36,6 +36,11 @@ trains = ir.northbound_from('clongriffin').before('HH:MM')
 NB: "HH:MM" must be soon, as the API, by default, returns upcoming
 arrivals
 
+### Find all Southbound trains from Malahide in the next N minutes
+
+<pre><code>trains = ir.southbound_from('malahide').in(N)
+</code></pre>
+
 ### Find out information for a specific train
 
 <pre><code>trains = ir.station('clongriffin', 60)
