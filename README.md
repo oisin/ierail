@@ -27,6 +27,15 @@ ir = IERail.new
 trains.each { |t| puts t.inspect }
 </code></pre>
 
+### Find all Northbound trains serving Clongriffin before / after a certain time
+
+<pre><code>trains = ir.northbound_from('clongriffin').after('HH:MM')
+trains = ir.northbound_from('clongriffin').before('HH:MM')
+</code></pre>
+
+NB: "HH:MM" must be soon, as the API, by default, returns upcoming
+arrivals
+
 ### Find out information for a specific train
 
 <pre><code>trains = ir.station('clongriffin', 60)
