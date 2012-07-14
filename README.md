@@ -29,8 +29,7 @@ trains.each { |t| puts t.inspect }
 
 ### Find all Northbound trains serving Clongriffin before / after a certain time
 
-<pre><code>
-trains = ir.northbound_from('clongriffin').after('HH:MM')
+<pre><code>trains = ir.northbound_from('clongriffin').after('HH:MM')
 trains = ir.northbound_from('clongriffin').before('HH:MM')
 </code></pre>
 
