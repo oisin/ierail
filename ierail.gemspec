@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'ierail'
-  s.version     = '0.3'
+  s.version     = '0.3.1'
   s.date        = '2012-07-09'
   s.summary     = "Irish Rail Train Schedule and Status API"
   s.description = "Irish Rail Train Schedule and Status API"
