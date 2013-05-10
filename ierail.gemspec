@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Oisin Hurley", "Gary Rafferty"]
   s.email       = 'oi.sin@nis.io'
   s.files       = ["lib/ierail.rb", "lib/station.rb", "lib/station_data.rb","lib/train.rb"]
-  s.homepage    =
-    'http://rubygems.org/gems/ierail'
+  s.homepage    = 'http://rubygems.org/gems/ierail'
+  s.add_dependency 'nokogiri'
+  s.add_dependency 'rest-client'
 end
