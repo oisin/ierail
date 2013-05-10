@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/converser/mon.png?branch=master)](https://travis-ci.org/oisin/ierail)
-[![Coverage Status](https://coveralls.io/repos/converser/mon/badge.png?branch=master)](https://coveralls.io/r/oisin/ierail)
+[![Build Status](https://travis-ci.org/oisin/ierail.png?branch=master)](https://travis-ci.org/oisin/ierail)
+[![Coverage Status](https://coveralls.io/repos/oisin/ierail/badge.png?branch=master)](https://coveralls.io/r/oisin/ierail)
 
 ## Irish Rail API Ruby Wrapper
 
