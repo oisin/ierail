@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/converser/mon.png?branch=master)](https://travis-ci.org/oisin/ierail)
+[![Coverage Status](https://coveralls.io/repos/converser/mon/badge.png?branch=master)](https://coveralls.io/r/oisin/ierail)
+
 ## Irish Rail API Ruby Wrapper
 
 I wrote most of this on the train, as is appropriate. 
