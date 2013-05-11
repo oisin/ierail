@@ -9,21 +9,21 @@ class StationData
     @station_name     = hash['Stationfullname']
     @station_code     = hash['Stationcode']
     @query_time       = hash['Querytime']
-    @train_date       = hash['Traindate']
     @origin           = hash['Origin']
     @destination      = hash['Destination']
-    @origin_time      = hash['Origintime']
-    @destination_time = hash['Destinationtime']
     @status           = hash['Status']
     @last_location    = hash['Lastlocation']
     @duein            = hash['Duein']
     @late             = hash['Late']
-    @exparrival       = hash['Exparrival']
-    @expdepart        = hash['Expdepart']
-    @scharrival       = hash['Scharrival']
-    @schdepart        = hash['Schdepart']
     @direction        = hash['Direction']
     @train_type       = hash['Traintype']
+    @exparrival       = Time.parse(hash['Exparrival'])
+    @expdepart        = Time.parse(hash['Expdepart'])
+    @scharrival       = Time.parse(hash['Scharrival'])
+    @schdepart        = Time.parse(hash['Schdepart'])
+    @train_date       = Time.parse(hash['Traindate'])
+    @origin_time      = Time.parse(hash['Origintime'])
+    @destination_time = Time.parse(hash['Destinationtime'])
   end
 
   def origin

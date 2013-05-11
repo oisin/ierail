@@ -13,4 +13,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'nokogiri', '~> 1.5.0'
   s.add_dependency 'rest-client', '~> 1.6.7'
   s.add_dependency 'json', '~> 1.7.7'
+  s.add_dependency 'activesupport', '~> 3.2.13'
 end
