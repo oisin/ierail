@@ -4,12 +4,14 @@ require_relative 'helper'
 
 require 'minitest/autorun'
 require 'ierail'
+require 'active_support/time'
+
 
 class IERailTest < MiniTest::Unit::TestCase
   def setup
     @ir = IERail.new
 
-    @now = Time.now
+    @now = Time.now.in_time_zone('Europe/Dublin')
   end
 
   def test_that_the_train_directions_are_correct
