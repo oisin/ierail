@@ -2,6 +2,8 @@ require 'rest-client'
 require 'nokogiri'
 require 'uri'
 require 'time'
+require 'tzinfo'
+require 'active_support/time'
 
 require 'train'
 require 'station'
@@ -11,7 +13,11 @@ require 'core_ext'
 class IERail
   
   URL = "http://api.irishrail.ie/realtime/realtime.asmx"
-  
+
+  def initialize
+    Time.zone= TZInfo::Timezone.get('Europe/Dublin')
+  end
+
   class IERailGet < Nokogiri::XML::SAX::Document
     
     attr_reader :result

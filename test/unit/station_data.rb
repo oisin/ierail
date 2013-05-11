@@ -37,7 +37,7 @@ class StationDataTest < MiniTest::Unit::TestCase
   end
 
   def test_that_there_is_a_train_date
-    refute_empty @station_data.train_date
+    refute_nil @station_data.train_date
   end
 
   def test_that_origin_method_returns_a_hash
@@ -45,8 +45,8 @@ class StationDataTest < MiniTest::Unit::TestCase
   end  
   
   def test_that_there_is_an_origin_name_and_time
-    refute_empty @station_data.origin[:name]
-    refute_empty @station_data.origin[:time]
+    refute_nil @station_data.origin[:name]
+    refute_nil @station_data.origin[:time]
   end
 
   def test_that_destination_method_returns_a_hash
@@ -54,8 +54,8 @@ class StationDataTest < MiniTest::Unit::TestCase
   end
 
   def test_that_there_is_a_destination_name_and_time
-    refute_empty @station_data.destination[:name]
-    refute_empty @station_data.destination[:time]
+    refute_nil @station_data.destination[:name]
+    refute_nil @station_data.destination[:time]
   end
 
   def test_that_arrival_method_returns_a_hash
@@ -63,8 +63,8 @@ class StationDataTest < MiniTest::Unit::TestCase
   end
 
   def test_that_there_is_an_arrival_sched_and_exp
-    refute_empty @station_data.arrival[:scheduled]
-    refute_empty @station_data.arrival[:expected]
+    refute_nil @station_data.arrival[:scheduled]
+    refute_nil @station_data.arrival[:expected]
   end
 
   def test_that_departure_method_returns_a_hash
@@ -72,8 +72,8 @@ class StationDataTest < MiniTest::Unit::TestCase
   end
 
   def test_that_there_is_a_departure_sched_and_exp
-    refute_empty @station_data.departure[:scheduled]
-    refute_empty @station_data.departure[:expected]
+    refute_nil @station_data.departure[:scheduled]
+    refute_nil @station_data.departure[:expected]
   end
 
   def test_that_it_responds_to_late?
