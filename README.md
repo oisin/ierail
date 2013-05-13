@@ -13,7 +13,7 @@ It's a trivial wrapper for the Irish Rail real time (whut?) train times system, 
 
 
 ```bash
-  $ gem install ierail
+$ gem install ierail
 ```
 
 ```ruby
@@ -25,22 +25,22 @@ ir = IERail.new
 ### Find all Southbound trains serving Clongriffin station
 
 ```ruby
-  trains = ir.southbound_from('clongriffin')
+trains = ir.southbound_from('clongriffin')
 ```
 
 ### Find all trains serving Clongriffin in the next 30 minutes
 
 ```ruby
-  trains = ir.station_times('clongriffin', 30)
+trains = ir.station_times('clongriffin', 30)
 
-  trains.each { |t| p t.inspect }
+trains.each { |t| p t.inspect }
 ```
 
 ### Find all Northbound trains serving Clongriffin before / after a certain time
 
 ```ruby
-  trains = ir.northbound_from('clongriffin').after('HH:MM')
-  trains = ir.northbound_from('clongriffin').before('HH:MM')
+trains = ir.northbound_from('clongriffin').after('HH:MM')
+trains = ir.northbound_from('clongriffin').before('HH:MM')
 ```
 
 NB: "HH:MM" must be soon, as the API, by default, returns upcoming
@@ -49,27 +49,27 @@ arrivals
 ### Find all Southbound trains from Malahide in the next N minutes
 
 ```ruby
-  trains = ir.southbound_from('malahide').in(N)
+trains = ir.southbound_from('malahide').in(N)
 ```
 
 ### Find out information for a specific train
 
 ```ruby
-  trains = ir.station('clongriffin', 60)
+trains = ir.station('clongriffin', 60)
 
-  trains.first.last_location # "Arrived Harmonstown"
+trains.first.last_location # "Arrived Harmonstown"
 
-  trains.first.origin # {:name=>"Greystones", :time=>2013-05-13 22:10:00 +0100}
+trains.first.origin # {:name=>"Greystones", :time=>2013-05-13 22:10:00 +0100}
 
-  trains.first.destination # {:name=>"Malahide", :time=>2013-05-13 22:10:00 +0100}
+trains.first.destination # {:name=>"Malahide", :time=>2013-05-13 22:10:00 +0100}
 
-  trains.first.arrival # {:scheduled=>2013-05-13 22:09:00 +0100, :expected=>2013-05-13 22:10:00 +0100}
+trains.first.arrival # {:scheduled=>2013-05-13 22:09:00 +0100, :expected=>2013-05-13 22:10:00 +0100}
 
-  trains.first.departure # {:scheduled=>2013-05-13 22:09:00 +0100, :expected=>2013-05-13 22:10:00 +0100}
+trains.first.departure # {:scheduled=>2013-05-13 22:09:00 +0100, :expected=>2013-05-13 22:10:00 +0100}
 
-  trains.first.duein # "2"
+trains.first.duein # "2"
 
-  trains.first.late? # 0 || 1
+trains.first.late? # 0 || 1
 ```
 
 Check the [main.rb](main.rb) for additional usage.
