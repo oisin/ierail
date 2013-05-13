@@ -4,10 +4,21 @@ require_relative 'helper'
 
 require 'minitest/autorun'
 require 'ierail'
+require 'tzinfo'
 
 class IERailTest < MiniTest::Unit::TestCase
   def setup
     @ir = IERail.new
+
+    if TZInfo::Timezone.get('Europe/Dublin').current_period.dst?
+      @now = Time.now
+
+      unless @now.zone == 'IST'
+        @now -= @now.utc_offset - 3600
+      end
+    else
+      @now -= @now.utc_offset
+    end
   end
 
   def test_that_the_train_directions_are_correct
@@ -24,23 +35,23 @@ class IERailTest < MiniTest::Unit::TestCase
 
   def test_that_the_before_time_constraint_works
     #Thirty minutes from now
-    thirty_mins = Time.now + 60*30
+    thirty_mins = @now + (60 * 30)
     time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
     before_train = @ir.southbound_from('Malahide').before(time).sample
-    assert Time.parse(before_train.expdepart) <= thirty_mins
+    assert before_train.expdepart <= thirty_mins
   end
 
   def test_that_the_after_time_constraint_works
     #Thirty minutes from now
-    thirty_mins = Time.now + 60*30
+    thirty_mins = @now + (60 * 30)
     time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
     after_train = @ir.southbound_from('Malahide').after(time).sample
-    assert Time.parse(after_train.expdepart) >= thirty_mins
+    assert after_train.expdepart >= thirty_mins
   end
 
   def test_that_the_in_constraint_works
     mins = 30
-    thirty_mins = Time.now + 60 * mins
+    thirty_mins = @now + (60 * mins)
     time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
     before_train = @ir.southbound_from('Malahide').before(time)
 
