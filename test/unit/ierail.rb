@@ -10,9 +10,9 @@ class IERailTest < MiniTest::Unit::TestCase
   def setup
     @ir = IERail.new
 
-    if TZInfo::Timezone.get('Europe/Dublin').current_period.dst?
-      @now = Time.now
+    @now = Time.now
 
+    if TZInfo::Timezone.get('Europe/Dublin').current_period.dst?
       unless @now.zone == 'IST'
         @now -= @now.utc_offset - 3600
       end
