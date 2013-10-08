@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ierail (0.3.3)
+    ierail (0.3.4)
       json (~> 1.7.7)
       nokogiri (~> 1.5.0)
       rest-client (~> 1.6.7)
@@ -20,7 +20,7 @@ GEM
     json (1.7.7)
     mime-types (1.23)
     multi_json (1.7.3)
-    nokogiri (1.5.9)
+    nokogiri (1.5.10)
     rake (10.0.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
