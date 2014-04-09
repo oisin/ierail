@@ -6,6 +6,7 @@ require 'time'
 require 'train'
 require 'station'
 require 'station_data'
+require 'train_movement'
 require 'core_ext'
 
 class IERail
@@ -141,6 +142,28 @@ class IERail
     retval = []
     ier.response.each do |sd|
       retval << StationData.new(sd)
+    end
+    retval
+  end
+  
+  # Get the movements of a particular train, by train code, on a date.
+  #  If no date is supplied assume train has run/is running today.
+  #
+  # This gives all the stations that the train has or will be stopped at.
+  # Returns an array of TrainMovement objects, and each object responds to
+  # {
+  #    obj#location => {code: "GLGRY", name: "Glenageary", stop_number: 1 (Stop number on route), type: "O" (Origin) \ "S" (Stop) \ "D" (Destination)}
+  #    obj#train => {:code => "E909", :date => "20 Jan 2012", :origin => "Glenageary"}
+  #    obj#arrival => {:scheduled => "10:09", :expected => "10:09", :actual => "10.09"}
+  #    obj#departure => {:scheduled => "10:09", :expected => "10:09", :actual => "10.09"}
+  #    obj#station => "Glenageary"
+  # }
+  #
+  def train_movements(code, date=Time.now)
+    ier = IERailGet.new("getTrainMovementsXML?TrainId=#{code}&TrainDate=#{date.strftime("%d/%m/%Y")}", "ArrayOfObjTrainMovements", "ObjTrainMovements")
+    retval = []
+    ier.response.each do |tm|
+      retval << TrainMovement.new(tm)
     end
     retval
   end
