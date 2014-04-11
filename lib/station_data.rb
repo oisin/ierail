@@ -18,12 +18,21 @@ class StationData
     @last_location    = hash['Lastlocation']
     @duein            = hash['Duein']
     @late             = hash['Late']
-    @exparrival       = Time.parse hash['Exparrival']
-    @expdepart        = Time.parse hash['Expdepart']
-    @scharrival       = Time.parse hash['Scharrival']
-    @schdepart        = Time.parse hash['Schdepart']
+    
+    # If train origin is station_name, then arrival times will be 00:00, so are adjusted to suit expected origin time.
+    # Likewise if destination is station_name, departure times should suit expected destination time.
+    # See: http://api.irishrail.ie/realtime/ Point 8
+    is_departure_station   = @station_name.eql?(@origin)
+    is_terminating_station = @station_name.eql?(@destination)
+    
+    @exparrival       = is_departure_station ? @origin_time : Time.parse(hash['Exparrival'])
+    @expdepart        = is_terminating_station ? @destination_time : Time.parse(hash['Expdepart'])
+    @scharrival       = is_departure_station ? @origin_time + @late.to_i : Time.parse(hash['Scharrival'])
+    @schdepart        = is_terminating_station ? @destination_time + @late.to_i : Time.parse(hash['Schdepart'])
     @direction        = hash['Direction']
     @train_type       = hash['Traintype']
+    
+    
   end
 
   def origin
