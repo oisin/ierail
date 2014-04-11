@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.email       = 'oi.sin@nis.io'
   s.files       = `git ls-files`.split("\n")
   s.homepage    = 'http://rubygems.org/gems/ierail'
-  s.add_dependency 'nokogiri', '~> 1.5.0'
-  s.add_dependency 'rest-client', '~> 1.6.7'
-  s.add_dependency 'json', '~> 1.7.7'
-  s.add_dependency 'tzinfo', '~> 0.3.37'
+  s.add_runtime_dependency 'json', '~> 1.7', '>= 1.7.7'
+  s.add_runtime_dependency 'rest-client', '~> 1.6', '>= 1.6.7'
+  s.add_runtime_dependency 'nokogiri', '~> 1.5', '>= 1.5.0'
+  s.add_runtime_dependency 'tzinfo', '~> 0.3', '>= 0.3.37'
 end
