@@ -71,11 +71,8 @@ class IERail
   #
   def stations
     ier = IERailGet.new("getAllStationsXML?", "arrayofobjstation", "objstation")
-    retval = []
-    ier.response.each do |s|
-      retval << Station.new(s)
-    end
-    retval
+    
+    ier.response.map { |s| Station.new(s) }
   end
   
   # Get ALL the trains! That are on the go at the moment.
@@ -92,11 +89,8 @@ class IERail
   #
   def trains
     ier = IERailGet.new("getCurrentTrainsXML?", "arrayofobjtrainpositions", "objtrainpositions")
-    retval = []
-    ier.response.each do |t|
-      retval << Train.new(t)
-    end
-    retval
+    
+    ier.response.map { |t| Train.new(t) }
   end
   
   # Get train information for a particular station, by station name. This gives data on trains thru that station
@@ -124,11 +118,8 @@ class IERail
   #
   def station(name)
     ier = IERailGet.new("getStationDataByNameXML?StationDesc=#{name}", "arrayofobjstationdata", "objstationdata")
-    retval = []
-    ier.response.each do |sd|
-      retval << StationData.new(sd)
-    end
-    retval
+    
+    ier.response.map { |sd| StationData.new(sd) }
   end
   
   # Get train information for a particular station, by station name, within the time period in minutes from now. 
@@ -138,11 +129,8 @@ class IERail
   #
   def station_times(name, mins)
     ier = IERailGet.new("getStationDataByNameXML_withNumMins?StationDesc=#{name}&NumMins=#{mins}", "arrayofobjstationdata", "objstationdata")
-    retval = []
-    ier.response.each do |sd|
-      retval << StationData.new(sd)
-    end
-    retval
+    
+    ier.response.map { |sd| StationData.new(sd) }
   end
   
   # Find station codes and descriptions using a partial string to match the station name
@@ -157,13 +145,12 @@ class IERail
   def find_station(partial)
     ier = IERailGet.new("getStationsFilterXML?StationText=#{partial}", "ArrayOfObjStationFilter", "objStationFilter")
     Struct.new("Station", :name, :description, :code)
-    retval = []
-    ier.response.each do |st|
-       retval << Struct::Station.new(st['StationDesc_sp'],
-                                     st['StationDesc'],
-                                     st['StationCode'])
+    
+    ier.response.map do |st|
+       Struct::Station.new(st['StationDesc_sp'],
+                           st['StationDesc'],
+                           st['StationCode'])
     end
-    retval
   end
 
   # Get direction-specific train information for a particular station, by station name. 
@@ -197,11 +184,8 @@ class IERail
       direction = name.to_s.split('_').first.capitalize
 
       ier = IERailGet.new("getStationDataByNameXML?StationDesc=#{args.first}", "arrayofobjstationdata", "objstationdata")
-      retval = []
-      ier.response.each do |sd|
-        retval << StationData.new(sd) if sd['Direction'] == direction
-      end
-      retval
+     
+      ier.response.select { |sd| sd['Direction'] == direction }.map { |sd| StationData.new(sd) }
     end
   end
 end
