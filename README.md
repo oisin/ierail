@@ -75,7 +75,7 @@ trains.first.late? # 0 || 1
 
 Check the [main.rb](main.rb) for additional usage.
 
-Pull requests welcome, because there's damn all in it at the moment. Please accompany the pull request with an appropriate test.
+Pull requests welcome, because there's damn all in it at the moment. Please accompany the pull request with an appropriate test, and if you can, an example here in the README.
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/oisin/ierail/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
