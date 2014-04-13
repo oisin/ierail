@@ -79,4 +79,8 @@ class StationDataTest < MiniTest::Unit::TestCase
   def test_that_it_responds_to_late?
     assert_respond_to @station_data, :late? 
   end
+
+  def test_late_greater_then_eq_zero
+    refute_same @station_data.late?, @station_data.late.to_i <= 0
+  end
 end 
