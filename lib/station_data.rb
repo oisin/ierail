@@ -4,19 +4,19 @@ class StationData
               :train_type, :direction, :query_time, :train_date, :expdepart
 
   def initialize hash
-    @servertime          = hash['Servertime']
+    @servertime          = Time.parse hash['Servertime']
     @traincode           = hash['Traincode']
     @station_name        = hash['Stationfullname']
     @station_code        = hash['Stationcode']
     @query_time          = Time.parse hash['Querytime']
-    @train_date          = hash['Traindate']
+    @train_date          = Date.parse hash['Traindate']
     @origin              = hash['Origin']
     @destination         = hash['Destination']
     @origin_time         = Time.parse hash['Origintime']
     @destination_time    = Time.parse hash['Destinationtime']
     @status              = hash['Status']
     @last_location       = hash['Lastlocation']
-    @duein               = hash['Duein']
+    @duein               = hash['Duein'].to_i
 
     # Though IE give a late value, this really represents difference from scheduled arrival
     # and therefore represents the number of minutes that the train is off-schedule where

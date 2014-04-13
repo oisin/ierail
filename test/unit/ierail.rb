@@ -69,11 +69,8 @@ class IERailTest < MiniTest::Unit::TestCase
   end
 
   def test_that_station_times_equivalent_to_in
-    mins = 30
-    thirty_mins = @now + (60 * mins)
-
     trains = @ir.station_times('Dublin Connolly', 30)
-    in_half_an_hour = @ir.station('Dublin Connolly').in(mins)
+    in_half_an_hour = @ir.station('Dublin Connolly').in(30)
 
     assert_equal trains.count, in_half_an_hour.count
     trains_codes = trains.map {|t| t.traincode}

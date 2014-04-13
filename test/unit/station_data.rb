@@ -11,6 +11,10 @@ class StationDataTest < MiniTest::Unit::TestCase
     @station_data = ir.station('Glenageary').sample
   end
 
+  def test_that_there_is_a_server_time
+    refute_nil @station_data.servertime
+  end
+
   def test_that_there_is_a_traincode
     refute_empty @station_data.traincode
   end
@@ -20,12 +24,16 @@ class StationDataTest < MiniTest::Unit::TestCase
     refute_empty @station_data.code
   end
 
+  def test_that_there_is_a_query_time
+    refute_nil @station_data.query_time
+  end
+
   def test_that_there_is_a_status
     refute_empty @station_data.status
   end
 
   def test_that_there_is_a_due_value
-   refute_empty @station_data.due_in
+   refute_nil @station_data.due_in
   end
 
   def test_that_there_is_a_minutes_early_value
@@ -41,7 +49,7 @@ class StationDataTest < MiniTest::Unit::TestCase
   end
 
   def test_that_there_is_a_train_date
-    refute_empty @station_data.train_date
+    refute_nil @station_data.train_date
   end
 
   def test_that_origin_method_returns_a_hash
