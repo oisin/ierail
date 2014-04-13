@@ -28,8 +28,12 @@ class StationDataTest < MiniTest::Unit::TestCase
    refute_empty @station_data.due_in
   end
 
-  def test_that_there_is_a_late_value
-    refute_empty @station_data.late
+  def test_that_there_is_a_minutes_early_value
+    refute_nil @station_data.minutes_early
+  end
+
+  def test_that_there_is_a_minutes_late_value
+    refute_nil @station_data.minutes_late
   end
 
   def test_that_there_is_a_query_time
@@ -80,7 +84,32 @@ class StationDataTest < MiniTest::Unit::TestCase
     assert_respond_to @station_data, :late? 
   end
 
-  def test_late_greater_then_eq_zero
-    refute_same @station_data.late?, @station_data.late.to_i <= 0
+  def test_that_late_not_early_or_on_time
+    if @station_data.late?
+      refute_same @station_data.late?, @station_data.early?
+      refute_same @station_data.late?, @station_data.on_time?
+    end
+  end
+
+  def test_that_it_responds_to_early?
+    assert_respond_to @station_data, :early?
+  end
+
+  def test_that_early_not_late_or_on_time
+    if @station_data.early?
+      refute_same @station_data.early?, @station_data.late?
+      refute_same @station_data.early?, @station_data.on_time?
+    end
+  end
+
+  def test_that_it_responds_to_on_time?
+    assert_respond_to @station_data, :on_time?
+  end
+
+  def test_that_on_time_not_early_or_late
+    if @station_data.on_time?
+      refute_same @station_data.on_time?, @station_data.early?
+      refute_same @station_data.on_time?, @station_data.late?
+    end
   end
 end 
