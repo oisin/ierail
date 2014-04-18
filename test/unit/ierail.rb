@@ -61,4 +61,14 @@ class IERailTest < MiniTest::Unit::TestCase
       assert_equal b.traincode, in_half_an_hour[i].traincode
     }
   end
+
+  def test_station_times
+    station_data = @ir.station_times('Dublin Connolly',30).sample
+    assert_instance_of StationData, station_data
+  end
+
+  def test_find_station
+    station = @ir.find_station('Howth').sample
+    assert_instance_of Struct::Station, station
+  end
 end
