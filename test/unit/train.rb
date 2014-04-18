@@ -2,9 +2,6 @@ $:.unshift(File.join(File.dirname(__FILE__), '..','..', 'lib'))
 
 require_relative 'helper'
 
-require 'minitest/autorun'
-require 'ierail'
-
 class TrainTest < MiniTest::Unit::TestCase
   def setup
     ir = IERail.new
