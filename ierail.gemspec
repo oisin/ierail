@@ -14,4 +14,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rest-client', '~> 1.6.7'
   s.add_dependency 'json', '~> 1.7.7'
   s.add_dependency 'tzinfo', '~> 0.3.37'
+  s.add_development_dependency 'vcr', '~> 2.9.0'
+  s.add_development_dependency 'webmock', '~> 1.17.4'
+  s.add_development_dependency 'timecop', '~> 0.6.2'
 end
