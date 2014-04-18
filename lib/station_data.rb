@@ -34,8 +34,8 @@ class StationData
     
     @exparrival       = is_departure_station ? @origin_time : Time.parse(hash['Exparrival'])
     @expdepart        = is_terminating_station ? @destination_time : Time.parse(hash['Expdepart'])
-    @scharrival       = is_departure_station ? @origin_time + @late.to_i : Time.parse(hash['Scharrival'])
-    @schdepart        = is_terminating_station ? @destination_time + @late.to_i : Time.parse(hash['Schdepart'])
+    @scharrival       = is_departure_station ? @origin_time + off_schedule_minutes : Time.parse(hash['Scharrival'])
+    @schdepart        = is_terminating_station ? @destination_time + off_schedule_minutes : Time.parse(hash['Schdepart'])
     @direction        = hash['Direction']
     @train_type       = hash['Traintype']
   end
