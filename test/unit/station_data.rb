@@ -87,4 +87,12 @@ class StationDataTest < MiniTest::Unit::TestCase
   def test_that_it_responds_to_late?
     assert_respond_to @station_data, :late? 
   end
+
+  def test_late_method
+    if @station_data.late.to_i > 0
+      assert @station_data.late?
+    else
+      refute @station_data.late?
+    end
+  end
 end 
