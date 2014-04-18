@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.irishrail.ie/realtime/realtime.asmx/getStationsFilterXML?StationText=Howth
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - ''
+      Date:
+      - Fri, 18 Apr 2014 10:48:28 GMT
+      Content-Length:
+      - '798'
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ArrayOfObjStationFilter
+        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
+        xmlns=\"http://api.irishrail.ie/realtime/\">\r\n  <objStationFilter>\r\n    <StationDesc_sp>Howth&amp;nbsp;Junction</StationDesc_sp>\r\n
+        \   <StationDesc>Donaghmede ( Howth Junction )</StationDesc>\r\n    <StationCode>HWTHJ</StationCode>\r\n
+        \ </objStationFilter>\r\n  <objStationFilter>\r\n    <StationDesc_sp>Howth</StationDesc_sp>\r\n
+        \   <StationDesc>Howth</StationDesc>\r\n    <StationCode>HOWTH</StationCode>\r\n
+        \ </objStationFilter>\r\n  <objStationFilter>\r\n    <StationDesc_sp>Howth&amp;nbsp;Junction</StationDesc_sp>\r\n
+        \   <StationDesc>Howth Junction</StationDesc>\r\n    <StationCode>HWTHJ</StationCode>\r\n
+        \ </objStationFilter>\r\n</ArrayOfObjStationFilter>"
+    http_version: 
+  recorded_at: Fri, 18 Apr 2014 10:48:29 GMT
+recorded_with: VCR 2.9.0

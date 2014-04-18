@@ -1,0 +1,240 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.irishrail.ie/realtime/realtime.asmx/getStationDataByNameXML?StationDesc=Dublin%20Connolly
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - ''
+      Date:
+      - Fri, 18 Apr 2014 10:48:28 GMT
+      Content-Length:
+      - '16462'
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ArrayOfObjStationData
+        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
+        xmlns=\"http://api.irishrail.ie/realtime/\">\r\n  <objStationData>\r\n    <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n
+        \   <Traincode>E811B</Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Bray</Origin>\r\n    <Destination>Malahide</Destination>\r\n
+        \   <Origintime>11:10</Origintime>\r\n    <Destinationtime>12:20</Destinationtime>\r\n
+        \   <Status>No Information</Status>\r\n    <Lastlocation />\r\n    <Duein>6</Duein>\r\n
+        \   <Late>0</Late>\r\n    <Exparrival>11:53</Exparrival>\r\n    <Expdepart>11:54</Expdepart>\r\n
+        \   <Scharrival>11:53</Scharrival>\r\n    <Schdepart>11:54</Schdepart>\r\n
+        \   <Direction>Northbound</Direction>\r\n    <Traintype>DART</Traintype>\r\n
+        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
+        \   <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n    <Traincode>E913
+        </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Bray</Origin>\r\n    <Destination>Howth</Destination>\r\n
+        \   <Origintime>11:25</Origintime>\r\n    <Destinationtime>12:33</Destinationtime>\r\n
+        \   <Status>En Route</Status>\r\n    <Lastlocation>Arrived Seapoint</Lastlocation>\r\n
+        \   <Duein>20</Duein>\r\n    <Late>-1</Late>\r\n    <Exparrival>12:07</Exparrival>\r\n
+        \   <Expdepart>12:08</Expdepart>\r\n    <Scharrival>12:08</Scharrival>\r\n
+        \   <Schdepart>12:09</Schdepart>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <Traintype>DART</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n
+        \   <Traincode>E812 </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Greystones</Origin>\r\n
+        \   <Destination>Malahide</Destination>\r\n    <Origintime>11:30</Origintime>\r\n
+        \   <Destinationtime>12:48</Destinationtime>\r\n    <Status>En Route</Status>\r\n
+        \   <Lastlocation>Departed Killiney</Lastlocation>\r\n    <Duein>36</Duein>\r\n
+        \   <Late>1</Late>\r\n    <Exparrival>12:23</Exparrival>\r\n    <Expdepart>12:24</Expdepart>\r\n
+        \   <Scharrival>12:22</Scharrival>\r\n    <Schdepart>12:23</Schdepart>\r\n
+        \   <Direction>Northbound</Direction>\r\n    <Traintype>DART</Traintype>\r\n
+        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
+        \   <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n    <Traincode>D807
+        </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Dublin Pearse</Origin>\r\n
+        \   <Destination>Drogheda</Destination>\r\n    <Origintime>12:30</Origintime>\r\n
+        \   <Destinationtime>13:29</Destinationtime>\r\n    <Status>No Information</Status>\r\n
+        \   <Lastlocation />\r\n    <Duein>48</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>12:35</Exparrival>\r\n
+        \   <Expdepart>12:36</Expdepart>\r\n    <Scharrival>12:35</Scharrival>\r\n
+        \   <Schdepart>12:36</Schdepart>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <Traintype>Train</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n
+        \   <Traincode>E914 </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Bray</Origin>\r\n    <Destination>Howth</Destination>\r\n
+        \   <Origintime>11:55</Origintime>\r\n    <Destinationtime>13:06</Destinationtime>\r\n
+        \   <Status>No Information</Status>\r\n    <Lastlocation />\r\n    <Duein>54</Duein>\r\n
+        \   <Late>0</Late>\r\n    <Exparrival>12:41</Exparrival>\r\n    <Expdepart>12:42</Expdepart>\r\n
+        \   <Scharrival>12:41</Scharrival>\r\n    <Schdepart>12:42</Schdepart>\r\n
+        \   <Direction>Northbound</Direction>\r\n    <Traintype>DART</Traintype>\r\n
+        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
+        \   <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n    <Traincode>D913
+        </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Dublin Pearse</Origin>\r\n
+        \   <Destination>Maynooth</Destination>\r\n    <Origintime>12:42</Origintime>\r\n
+        \   <Destinationtime>13:26</Destinationtime>\r\n    <Status>No Information</Status>\r\n
+        \   <Lastlocation />\r\n    <Duein>60</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>12:47</Exparrival>\r\n
+        \   <Expdepart>12:48</Expdepart>\r\n    <Scharrival>12:47</Scharrival>\r\n
+        \   <Schdepart>12:48</Schdepart>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <Traintype>Train</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n
+        \   <Traincode>E813B</Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Bray</Origin>\r\n    <Destination>Malahide</Destination>\r\n
+        \   <Origintime>12:10</Origintime>\r\n    <Destinationtime>13:20</Destinationtime>\r\n
+        \   <Status>No Information</Status>\r\n    <Lastlocation />\r\n    <Duein>66</Duein>\r\n
+        \   <Late>0</Late>\r\n    <Exparrival>12:53</Exparrival>\r\n    <Expdepart>12:54</Expdepart>\r\n
+        \   <Scharrival>12:53</Scharrival>\r\n    <Schdepart>12:54</Schdepart>\r\n
+        \   <Direction>Northbound</Direction>\r\n    <Traintype>DART</Traintype>\r\n
+        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
+        \   <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n    <Traincode>A906
+        </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Dublin Connolly</Origin>\r\n
+        \   <Destination>Sligo</Destination>\r\n    <Origintime>13:05</Origintime>\r\n
+        \   <Destinationtime>16:10</Destinationtime>\r\n    <Status>No Information</Status>\r\n
+        \   <Lastlocation />\r\n    <Duein>77</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>00:00</Exparrival>\r\n
+        \   <Expdepart>13:05</Expdepart>\r\n    <Scharrival>00:00</Scharrival>\r\n
+        \   <Schdepart>13:05</Schdepart>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <Traintype>Train</Traintype>\r\n    <Locationtype>O</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n
+        \   <Traincode>E915 </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Bray</Origin>\r\n    <Destination>Howth</Destination>\r\n
+        \   <Origintime>12:25</Origintime>\r\n    <Destinationtime>13:33</Destinationtime>\r\n
+        \   <Status>No Information</Status>\r\n    <Lastlocation />\r\n    <Duein>81</Duein>\r\n
+        \   <Late>0</Late>\r\n    <Exparrival>13:08</Exparrival>\r\n    <Expdepart>13:09</Expdepart>\r\n
+        \   <Scharrival>13:08</Scharrival>\r\n    <Schdepart>13:09</Schdepart>\r\n
+        \   <Direction>Northbound</Direction>\r\n    <Traintype>DART</Traintype>\r\n
+        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
+        \   <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n    <Traincode>E244B</Traincode>\r\n
+        \   <Stationfullname>Dublin Connolly</Stationfullname>\r\n    <Stationcode>CNLLY</Stationcode>\r\n
+        \   <Querytime>11:48:29</Querytime>\r\n    <Traindate>18 Apr 2014</Traindate>\r\n
+        \   <Origin>Howth</Origin>\r\n    <Destination>Bray</Destination>\r\n    <Origintime>11:30</Origintime>\r\n
+        \   <Destinationtime>12:39</Destinationtime>\r\n    <Status>No Information</Status>\r\n
+        \   <Lastlocation />\r\n    <Duein>7</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>11:54</Exparrival>\r\n
+        \   <Expdepart>11:55</Expdepart>\r\n    <Scharrival>11:54</Scharrival>\r\n
+        \   <Schdepart>11:55</Schdepart>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <Traintype>DART</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n
+        \   <Traincode>A905 </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Sligo</Origin>\r\n    <Destination>Dublin
+        Connolly</Destination>\r\n    <Origintime>09:00</Origintime>\r\n    <Destinationtime>11:58</Destinationtime>\r\n
+        \   <Status>En Route</Status>\r\n    <Lastlocation>Arrived Drumcondra</Lastlocation>\r\n
+        \   <Duein>8</Duein>\r\n    <Late>-2</Late>\r\n    <Exparrival>11:56</Exparrival>\r\n
+        \   <Expdepart>00:00</Expdepart>\r\n    <Scharrival>11:58</Scharrival>\r\n
+        \   <Schdepart>00:00</Schdepart>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <Traintype>Train</Traintype>\r\n    <Locationtype>D</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n
+        \   <Traincode>E212 </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Howth</Origin>\r\n    <Destination>Bray</Destination>\r\n
+        \   <Origintime>11:45</Origintime>\r\n    <Destinationtime>12:54</Destinationtime>\r\n
+        \   <Status>En Route</Status>\r\n    <Lastlocation>Arrived Sutton</Lastlocation>\r\n
+        \   <Duein>22</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>12:09</Exparrival>\r\n
+        \   <Expdepart>12:10</Expdepart>\r\n    <Scharrival>12:09</Scharrival>\r\n
+        \   <Schdepart>12:10</Schdepart>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <Traintype>DART</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n
+        \   <Traincode>P609 </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Dundalk</Origin>\r\n
+        \   <Destination>Dublin Pearse</Destination>\r\n    <Origintime>11:00</Origintime>\r\n
+        \   <Destinationtime>12:23</Destinationtime>\r\n    <Status>En Route</Status>\r\n
+        \   <Lastlocation>Departed Skerries</Lastlocation>\r\n    <Duein>31</Duein>\r\n
+        \   <Late>3</Late>\r\n    <Exparrival>12:18</Exparrival>\r\n    <Expdepart>12:19</Expdepart>\r\n
+        \   <Scharrival>12:15</Scharrival>\r\n    <Schdepart>12:16</Schdepart>\r\n
+        \   <Direction>Southbound</Direction>\r\n    <Traintype>Train</Traintype>\r\n
+        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
+        \   <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n    <Traincode>P658
+        </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Maynooth</Origin>\r\n
+        \   <Destination>Dublin Pearse</Destination>\r\n    <Origintime>11:43</Origintime>\r\n
+        \   <Destinationtime>12:30</Destinationtime>\r\n    <Status>En Route</Status>\r\n
+        \   <Lastlocation>Arrived Leixlip (Louisa Bridge)</Lastlocation>\r\n    <Duein>36</Duein>\r\n
+        \   <Late>-2</Late>\r\n    <Exparrival>12:22</Exparrival>\r\n    <Expdepart>12:24</Expdepart>\r\n
+        \   <Scharrival>12:24</Scharrival>\r\n    <Schdepart>12:26</Schdepart>\r\n
+        \   <Direction>Southbound</Direction>\r\n    <Traintype>Train</Traintype>\r\n
+        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
+        \   <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n    <Traincode>E112
+        </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Malahide</Origin>\r\n
+        \   <Destination>Greystones</Destination>\r\n    <Origintime>12:04</Origintime>\r\n
+        \   <Destinationtime>13:22</Destinationtime>\r\n    <Status>No Information</Status>\r\n
+        \   <Lastlocation />\r\n    <Duein>42</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>12:29</Exparrival>\r\n
+        \   <Expdepart>12:30</Expdepart>\r\n    <Scharrival>12:29</Scharrival>\r\n
+        \   <Schdepart>12:30</Schdepart>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <Traintype>DART</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n
+        \   <Traincode>E213 </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Howth</Origin>\r\n    <Destination>Bray</Destination>\r\n
+        \   <Origintime>12:15</Origintime>\r\n    <Destinationtime>13:24</Destinationtime>\r\n
+        \   <Status>No Information</Status>\r\n    <Lastlocation />\r\n    <Duein>52</Duein>\r\n
+        \   <Late>0</Late>\r\n    <Exparrival>12:39</Exparrival>\r\n    <Expdepart>12:40</Expdepart>\r\n
+        \   <Scharrival>12:39</Scharrival>\r\n    <Schdepart>12:40</Schdepart>\r\n
+        \   <Direction>Southbound</Direction>\r\n    <Traintype>DART</Traintype>\r\n
+        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
+        \   <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n    <Traincode>A125
+        </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Belfast Central</Origin>\r\n
+        \   <Destination>Dublin Connolly</Destination>\r\n    <Origintime>10:35</Origintime>\r\n
+        \   <Destinationtime>12:44</Destinationtime>\r\n    <Status>No Information</Status>\r\n
+        \   <Lastlocation />\r\n    <Duein>56</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>12:44</Exparrival>\r\n
+        \   <Expdepart>00:00</Expdepart>\r\n    <Scharrival>12:44</Scharrival>\r\n
+        \   <Schdepart>00:00</Schdepart>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <Traintype>Train</Traintype>\r\n    <Locationtype>D</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n
+        \   <Traincode>E245B</Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Malahide</Origin>\r\n
+        \   <Destination>Bray</Destination>\r\n    <Origintime>12:30</Origintime>\r\n
+        \   <Destinationtime>13:39</Destinationtime>\r\n    <Status>No Information</Status>\r\n
+        \   <Lastlocation />\r\n    <Duein>67</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>12:54</Exparrival>\r\n
+        \   <Expdepart>12:55</Expdepart>\r\n    <Scharrival>12:54</Scharrival>\r\n
+        \   <Schdepart>12:55</Schdepart>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <Traintype>DART</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n
+        \   <Traincode>E214 </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Howth</Origin>\r\n    <Destination>Bray</Destination>\r\n
+        \   <Origintime>12:45</Origintime>\r\n    <Destinationtime>13:54</Destinationtime>\r\n
+        \   <Status>No Information</Status>\r\n    <Lastlocation />\r\n    <Duein>82</Duein>\r\n
+        \   <Late>0</Late>\r\n    <Exparrival>13:09</Exparrival>\r\n    <Expdepart>13:10</Expdepart>\r\n
+        \   <Scharrival>13:09</Scharrival>\r\n    <Schdepart>13:10</Schdepart>\r\n
+        \   <Direction>Southbound</Direction>\r\n    <Traintype>DART</Traintype>\r\n
+        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
+        \   <Servertime>2014-04-18T11:48:29.377</Servertime>\r\n    <Traincode>P611
+        </Traincode>\r\n    <Stationfullname>Dublin Connolly</Stationfullname>\r\n
+        \   <Stationcode>CNLLY</Stationcode>\r\n    <Querytime>11:48:29</Querytime>\r\n
+        \   <Traindate>18 Apr 2014</Traindate>\r\n    <Origin>Drogheda</Origin>\r\n
+        \   <Destination>Dublin Pearse</Destination>\r\n    <Origintime>12:20</Origintime>\r\n
+        \   <Destinationtime>13:19</Destinationtime>\r\n    <Status>No Information</Status>\r\n
+        \   <Lastlocation />\r\n    <Duein>86</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>13:13</Exparrival>\r\n
+        \   <Expdepart>13:14</Expdepart>\r\n    <Scharrival>13:13</Scharrival>\r\n
+        \   <Schdepart>13:14</Schdepart>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <Traintype>Train</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n</ArrayOfObjStationData>"
+    http_version: 
+  recorded_at: Fri, 18 Apr 2014 10:48:29 GMT
+recorded_with: VCR 2.9.0

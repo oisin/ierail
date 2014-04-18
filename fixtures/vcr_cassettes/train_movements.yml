@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.irishrail.ie/realtime/realtime.asmx/getTrainMovementsXML?TrainDate=18/04/2014&TrainId=P241
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Server:
+      - ''
+      Date:
+      - Fri, 18 Apr 2014 10:48:19 GMT
+      Content-Length:
+      - '2308'
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ArrayOfObjTrainMovements
+        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
+        xmlns=\"http://api.irishrail.ie/realtime/\">\r\n  <objTrainMovements>\r\n
+        \   <TrainCode>P241 </TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>GHANE</LocationCode>\r\n    <LocationFullName>Glounthaune</LocationFullName>\r\n
+        \   <LocationOrder>1</LocationOrder>\r\n    <LocationType>O</LocationType>\r\n
+        \   <TrainOrigin>Glounthaune</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
+        \   <ScheduledArrival>00:00:00</ScheduledArrival>\r\n    <ScheduledDeparture>11:44:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>00:00:00</ExpectedArrival>\r\n    <ExpectedDeparture>11:44:00</ExpectedDeparture>\r\n
+        \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
+        />\r\n    <StopType>C</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
+        \   <TrainCode>P241 </TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>LSLND</LocationCode>\r\n    <LocationFullName>LittleIsland</LocationFullName>\r\n
+        \   <LocationOrder>2</LocationOrder>\r\n    <LocationType>S</LocationType>\r\n
+        \   <TrainOrigin>Glounthaune</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
+        \   <ScheduledArrival>11:46:30</ScheduledArrival>\r\n    <ScheduledDeparture>11:47:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>11:46:30</ExpectedArrival>\r\n    <ExpectedDeparture>11:47:00</ExpectedDeparture>\r\n
+        \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
+        />\r\n    <StopType>N</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
+        \   <TrainCode>P241 </TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>CORK</LocationCode>\r\n    <LocationFullName>Cork</LocationFullName>\r\n
+        \   <LocationOrder>3</LocationOrder>\r\n    <LocationType>D</LocationType>\r\n
+        \   <TrainOrigin>Glounthaune</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
+        \   <ScheduledArrival>11:54:00</ScheduledArrival>\r\n    <ScheduledDeparture>00:00:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>11:54:00</ExpectedArrival>\r\n    <ExpectedDeparture>00:00:00</ExpectedDeparture>\r\n
+        \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
+        />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n</ArrayOfObjTrainMovements>"
+    http_version: 
+  recorded_at: Fri, 18 Apr 2014 10:48:19 GMT
+recorded_with: VCR 2.9.0
