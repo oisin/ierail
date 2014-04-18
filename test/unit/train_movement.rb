@@ -8,9 +8,19 @@ require 'ierail'
 class TrainMovementTest < MiniTest::Unit::TestCase
   def setup
     ir = IERail.new
-        
-    train_code = ir.trains.sample.code #Use a random train code
-    @train_movement = ir.train_movements(train_code).sample #Use a random movement from the random train
+ 
+    VCR.configure do |c|
+      c.cassette_library_dir = 'fixtures/vcr_cassettes'
+      c.hook_into :webmock
+    end
+
+    VCR.use_cassette('trains') do
+      @train_code = ir.trains.first.code #Use a random train code
+    
+      VCR.use_cassette('train_movements') do
+       @train_movement = ir.train_movements(@train_code).sample #Use a random movement from the random train
+      end
+    end
   end
     
   def test_that_location_method_returns_a_hash

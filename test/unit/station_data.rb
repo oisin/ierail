@@ -8,7 +8,15 @@ require 'ierail'
 class StationDataTest < MiniTest::Unit::TestCase
   def setup
     ir = IERail.new
-    @station_data = ir.station('Glenageary').sample
+    
+    VCR.configure do |c|
+      c.cassette_library_dir = 'fixtures/vcr_cassettes'
+      c.hook_into :webmock
+    end
+
+    VCR.use_cassette('station') do
+      @station_data = ir.station('Dublin Connolly').sample #Use a random station
+    end
   end
 
   def test_that_there_is_a_traincode
