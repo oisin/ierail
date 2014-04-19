@@ -38,7 +38,7 @@ class IERailTest < MiniTest::Unit::TestCase
     thirty_mins = @now + (60 * 30)
     time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
     before_train = @ir.southbound_from('Dublin Connolly').before(time).sample
-    assert before_train.expected_departure <= thirty_mins
+    assert before_train.arrival[:expected] <= thirty_mins
   end
 
   def test_that_the_after_time_constraint_works
@@ -46,7 +46,7 @@ class IERailTest < MiniTest::Unit::TestCase
     thirty_mins = @now + (60 * 30)
     time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
     after_train = @ir.southbound_from('Dublin Connolly').after(time).sample
-    assert after_train.expected_departure >= thirty_mins
+    assert after_train.arrival[:expected] >= thirty_mins
   end
 
   def test_that_the_in_constraint_works
