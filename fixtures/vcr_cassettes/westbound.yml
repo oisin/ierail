@@ -25,54 +25,64 @@ http_interactions:
       Server:
       - ''
       Date:
-      - Sat, 19 Apr 2014 07:25:16 GMT
+      - Sat, 19 Apr 2014 18:10:55 GMT
       Content-Length:
-      - '3483'
+      - '4266'
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ArrayOfObjStationData
         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
-        xmlns=\"http://api.irishrail.ie/realtime/\">\r\n  <objStationData>\r\n    <Servertime>2014-04-19T08:25:16.643</Servertime>\r\n
-        \   <Traincode>E804 </Traincode>\r\n    <Stationfullname>Clongriffin</Stationfullname>\r\n
-        \   <Stationcode>GRGRD</Stationcode>\r\n    <Querytime>08:25:16</Querytime>\r\n
-        \   <Traindate>19 Apr 2014</Traindate>\r\n    <Origin>Greystones</Origin>\r\n
-        \   <Destination>Malahide</Destination>\r\n    <Origintime>07:30</Origintime>\r\n
-        \   <Destinationtime>08:49</Destinationtime>\r\n    <Status>En Route</Status>\r\n
-        \   <Lastlocation>Departed Dublin Connolly</Lastlocation>\r\n    <Duein>15</Duein>\r\n
-        \   <Late>-1</Late>\r\n    <Exparrival>08:40</Exparrival>\r\n    <Expdepart>08:40</Expdepart>\r\n
-        \   <Scharrival>08:40</Scharrival>\r\n    <Schdepart>08:41</Schdepart>\r\n
-        \   <Direction>Northbound</Direction>\r\n    <Traintype>DART</Traintype>\r\n
-        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
-        \   <Servertime>2014-04-19T08:25:16.643</Servertime>\r\n    <Traincode>E805
-        </Traincode>\r\n    <Stationfullname>Clongriffin</Stationfullname>\r\n    <Stationcode>GRGRD</Stationcode>\r\n
-        \   <Querytime>08:25:16</Querytime>\r\n    <Traindate>19 Apr 2014</Traindate>\r\n
-        \   <Origin>Bray</Origin>\r\n    <Destination>Malahide</Destination>\r\n    <Origintime>08:10</Origintime>\r\n
-        \   <Destinationtime>09:21</Destinationtime>\r\n    <Status>En Route</Status>\r\n
-        \   <Lastlocation>Arrived Sandycove</Lastlocation>\r\n    <Duein>46</Duein>\r\n
-        \   <Late>-1</Late>\r\n    <Exparrival>09:10</Exparrival>\r\n    <Expdepart>09:11</Expdepart>\r\n
-        \   <Scharrival>09:12</Scharrival>\r\n    <Schdepart>09:12</Schdepart>\r\n
-        \   <Direction>Northbound</Direction>\r\n    <Traintype>DART</Traintype>\r\n
-        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
-        \   <Servertime>2014-04-19T08:25:16.643</Servertime>\r\n    <Traincode>E106
-        </Traincode>\r\n    <Stationfullname>Clongriffin</Stationfullname>\r\n    <Stationcode>GRGRD</Stationcode>\r\n
-        \   <Querytime>08:25:16</Querytime>\r\n    <Traindate>19 Apr 2014</Traindate>\r\n
-        \   <Origin>Malahide</Origin>\r\n    <Destination>Greystones</Destination>\r\n
-        \   <Origintime>09:00</Origintime>\r\n    <Destinationtime>10:20</Destinationtime>\r\n
-        \   <Status>No Information</Status>\r\n    <Lastlocation />\r\n    <Duein>42</Duein>\r\n
-        \   <Late>0</Late>\r\n    <Exparrival>09:06</Exparrival>\r\n    <Expdepart>09:07</Expdepart>\r\n
-        \   <Scharrival>09:06</Scharrival>\r\n    <Schdepart>09:07</Schdepart>\r\n
-        \   <Direction>Southbound</Direction>\r\n    <Traintype>DART</Traintype>\r\n
-        \   <Locationtype>S</Locationtype>\r\n  </objStationData>\r\n  <objStationData>\r\n
-        \   <Servertime>2014-04-19T08:25:16.643</Servertime>\r\n    <Traincode>E242
-        </Traincode>\r\n    <Stationfullname>Clongriffin</Stationfullname>\r\n    <Stationcode>GRGRD</Stationcode>\r\n
-        \   <Querytime>08:25:16</Querytime>\r\n    <Traindate>19 Apr 2014</Traindate>\r\n
-        \   <Origin>Malahide</Origin>\r\n    <Destination>Bray</Destination>\r\n    <Origintime>09:30</Origintime>\r\n
-        \   <Destinationtime>10:39</Destinationtime>\r\n    <Status>No Information</Status>\r\n
-        \   <Lastlocation />\r\n    <Duein>72</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>09:36</Exparrival>\r\n
-        \   <Expdepart>09:37</Expdepart>\r\n    <Scharrival>09:36</Scharrival>\r\n
-        \   <Schdepart>09:37</Schdepart>\r\n    <Direction>Southbound</Direction>\r\n
+        xmlns=\"http://api.irishrail.ie/realtime/\">\r\n  <objStationData>\r\n    <Servertime>2014-04-19T19:10:55.677</Servertime>\r\n
+        \   <Traincode>E826 </Traincode>\r\n    <Stationfullname>Clongriffin</Stationfullname>\r\n
+        \   <Stationcode>GRGRD</Stationcode>\r\n    <Querytime>19:10:55</Querytime>\r\n
+        \   <Traindate>19 Apr 2014</Traindate>\r\n    <Origin>Bray</Origin>\r\n    <Destination>Malahide</Destination>\r\n
+        \   <Origintime>18:25</Origintime>\r\n    <Destinationtime>19:32</Destinationtime>\r\n
+        \   <Status>En Route</Status>\r\n    <Lastlocation>Departed Dublin Connolly</Lastlocation>\r\n
+        \   <Duein>16</Duein>\r\n    <Late>1</Late>\r\n    <Exparrival>19:25</Exparrival>\r\n
+        \   <Expdepart>19:26</Expdepart>\r\n    <Scharrival>19:25</Scharrival>\r\n
+        \   <Schdepart>19:25</Schdepart>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <Traintype>DART</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-19T19:10:55.677</Servertime>\r\n
+        \   <Traincode>E827 </Traincode>\r\n    <Stationfullname>Clongriffin</Stationfullname>\r\n
+        \   <Stationcode>GRGRD</Stationcode>\r\n    <Querytime>19:10:55</Querytime>\r\n
+        \   <Traindate>19 Apr 2014</Traindate>\r\n    <Origin>Bray</Origin>\r\n    <Destination>Malahide</Destination>\r\n
+        \   <Origintime>18:55</Origintime>\r\n    <Destinationtime>20:05</Destinationtime>\r\n
+        \   <Status>En Route</Status>\r\n    <Lastlocation>Arrived Glenageary</Lastlocation>\r\n
+        \   <Duein>47</Duein>\r\n    <Late>1</Late>\r\n    <Exparrival>19:57</Exparrival>\r\n
+        \   <Expdepart>19:57</Expdepart>\r\n    <Scharrival>19:56</Scharrival>\r\n
+        \   <Schdepart>19:56</Schdepart>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <Traintype>DART</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-19T19:10:55.677</Servertime>\r\n
+        \   <Traincode>E227 </Traincode>\r\n    <Stationfullname>Clongriffin</Stationfullname>\r\n
+        \   <Stationcode>GRGRD</Stationcode>\r\n    <Querytime>19:10:55</Querytime>\r\n
+        \   <Traindate>19 Apr 2014</Traindate>\r\n    <Origin>Malahide</Origin>\r\n
+        \   <Destination>Bray</Destination>\r\n    <Origintime>19:15</Origintime>\r\n
+        \   <Destinationtime>20:24</Destinationtime>\r\n    <Status>No Information</Status>\r\n
+        \   <Lastlocation />\r\n    <Duein>12</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>19:21</Exparrival>\r\n
+        \   <Expdepart>19:22</Expdepart>\r\n    <Scharrival>19:21</Scharrival>\r\n
+        \   <Schdepart>19:22</Schdepart>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <Traintype>DART</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-19T19:10:55.677</Servertime>\r\n
+        \   <Traincode>E228 </Traincode>\r\n    <Stationfullname>Clongriffin</Stationfullname>\r\n
+        \   <Stationcode>GRGRD</Stationcode>\r\n    <Querytime>19:10:55</Querytime>\r\n
+        \   <Traindate>19 Apr 2014</Traindate>\r\n    <Origin>Malahide</Origin>\r\n
+        \   <Destination>Bray</Destination>\r\n    <Origintime>19:45</Origintime>\r\n
+        \   <Destinationtime>20:54</Destinationtime>\r\n    <Status>No Information</Status>\r\n
+        \   <Lastlocation />\r\n    <Duein>42</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>19:51</Exparrival>\r\n
+        \   <Expdepart>19:52</Expdepart>\r\n    <Scharrival>19:51</Scharrival>\r\n
+        \   <Schdepart>19:52</Schdepart>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <Traintype>DART</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
+        \ </objStationData>\r\n  <objStationData>\r\n    <Servertime>2014-04-19T19:10:55.677</Servertime>\r\n
+        \   <Traincode>E229 </Traincode>\r\n    <Stationfullname>Clongriffin</Stationfullname>\r\n
+        \   <Stationcode>GRGRD</Stationcode>\r\n    <Querytime>19:10:55</Querytime>\r\n
+        \   <Traindate>19 Apr 2014</Traindate>\r\n    <Origin>Malahide</Origin>\r\n
+        \   <Destination>Bray</Destination>\r\n    <Origintime>20:15</Origintime>\r\n
+        \   <Destinationtime>21:24</Destinationtime>\r\n    <Status>No Information</Status>\r\n
+        \   <Lastlocation />\r\n    <Duein>72</Duein>\r\n    <Late>0</Late>\r\n    <Exparrival>20:21</Exparrival>\r\n
+        \   <Expdepart>20:22</Expdepart>\r\n    <Scharrival>20:21</Scharrival>\r\n
+        \   <Schdepart>20:22</Schdepart>\r\n    <Direction>Southbound</Direction>\r\n
         \   <Traintype>DART</Traintype>\r\n    <Locationtype>S</Locationtype>\r\n
         \ </objStationData>\r\n</ArrayOfObjStationData>"
     http_version: 
-  recorded_at: Sat, 19 Apr 2014 07:25:18 GMT
+  recorded_at: Sat, 19 Apr 2014 18:10:57 GMT
 recorded_with: VCR 2.9.0

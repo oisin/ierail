@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.irishrail.ie/realtime/realtime.asmx/getStationsFilterXML?StationText=Howth
+    uri: http://api.irishrail.ie/realtime/realtime.asmx/getStationsFilterXML?StationText=Dublin%20Connolly
     body:
       encoding: US-ASCII
       string: ''
@@ -25,20 +25,16 @@ http_interactions:
       Server:
       - ''
       Date:
-      - Sat, 19 Apr 2014 07:25:17 GMT
+      - Sat, 19 Apr 2014 18:10:55 GMT
       Content-Length:
-      - '798'
+      - '428'
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ArrayOfObjStationFilter
         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
-        xmlns=\"http://api.irishrail.ie/realtime/\">\r\n  <objStationFilter>\r\n    <StationDesc_sp>Howth&amp;nbsp;Junction</StationDesc_sp>\r\n
-        \   <StationDesc>Donaghmede ( Howth Junction )</StationDesc>\r\n    <StationCode>HWTHJ</StationCode>\r\n
-        \ </objStationFilter>\r\n  <objStationFilter>\r\n    <StationDesc_sp>Howth</StationDesc_sp>\r\n
-        \   <StationDesc>Howth</StationDesc>\r\n    <StationCode>HOWTH</StationCode>\r\n
-        \ </objStationFilter>\r\n  <objStationFilter>\r\n    <StationDesc_sp>Howth&amp;nbsp;Junction</StationDesc_sp>\r\n
-        \   <StationDesc>Howth Junction</StationDesc>\r\n    <StationCode>HWTHJ</StationCode>\r\n
+        xmlns=\"http://api.irishrail.ie/realtime/\">\r\n  <objStationFilter>\r\n    <StationDesc_sp>Dublin&amp;nbsp;Connolly</StationDesc_sp>\r\n
+        \   <StationDesc>Dublin Connolly</StationDesc>\r\n    <StationCode>CNLLY</StationCode>\r\n
         \ </objStationFilter>\r\n</ArrayOfObjStationFilter>"
     http_version: 
-  recorded_at: Sat, 19 Apr 2014 07:25:18 GMT
+  recorded_at: Sat, 19 Apr 2014 18:10:57 GMT
 recorded_with: VCR 2.9.0
