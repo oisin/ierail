@@ -61,12 +61,11 @@ class IERailTest < MiniTest::Unit::TestCase
   end
 
   def test_that_the_in_constraint_works
-    VCR.use_cassette('southbound') do |cassette|
+    VCR.use_cassette('southbound_from') do |cassette|
       Timecop.freeze(cassette.originally_recorded_at || Time.now) do
         mins = 30
         thirty_mins = Time.now + (60 * mins)
         time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
-        
         southbounds = @ir.southbound_from('Dublin Connolly')
 
         before_train = southbounds.before(time)
@@ -92,32 +91,43 @@ class IERailTest < MiniTest::Unit::TestCase
   def test_find_station
     VCR.use_cassette('find_station') do |cassette|
       Timecop.freeze(cassette.originally_recorded_at || Time.now) do
-        station = @ir.find_station('Howth').sample
+        station = @ir.find_station('Dublin Connolly').sample
         assert_instance_of Struct::Station, station
       end
     end
   end
 
   def test_that_station_times_returns_station_data
-    train = @ir.station_times('Dublin Connolly', 30).sample #random train in next 30 mins
-    assert_equal train.class, StationData #StationData has already been tested
+    VCR.use_cassette('station_times') do |cassette|
+      Timecop.freeze(cassette.originally_recorded_at || Time.now) do
+        train = @ir.station_times('Dublin Connolly', 30).sample #random train in next 30 mins
+        assert_equal train.class, StationData #StationData has already been tested
+      end
+    end
   end
 
   def test_that_station_times_equivalent_to_in
-    trains = @ir.station_times('Dublin Connolly', 30)
-    in_half_an_hour = @ir.station('Dublin Connolly').in(30)
+    VCR.use_cassette('station_times') do |cassette|
+      trains = @ir.station_times('Dublin Connolly', 30)
+      
+      VCR.use_cassette('station') do |cassette|
+        in_half_an_hour = @ir.station('Dublin Connolly').in(30)
 
-    assert_equal trains.count, in_half_an_hour.count
-    trains_codes = trains.map {|t| t.traincode}
-    half_hour_train_codes = in_half_an_hour.map {|t| t.traincode}
-    assert_equal trains_codes, half_hour_train_codes
+        assert_equal trains.count, in_half_an_hour.count
+        trains_codes = trains.map {|t| t.traincode}
+        half_hour_train_codes = in_half_an_hour.map {|t| t.traincode}
+        assert_equal trains_codes, half_hour_train_codes
+      end
+    end
   end
 
   def test_that_found_station_is_a_struct_with_name_description_code
-    station = @ir.find_station('con').sample
-    assert_equal station.class, Struct::Station
-    refute_nil station.name
-    refute_nil station.description
-    refute_nil station.code
+    VCR.use_cassette('find_station') do |cassette|
+      station = @ir.find_station('Dublin Connolly').sample
+      assert_equal station.class, Struct::Station
+      refute_nil station.name
+      refute_nil station.description
+      refute_nil station.code
+    end
   end
 end
