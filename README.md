@@ -97,6 +97,20 @@ fourth_stop.train #{:code => "E808", :date => 2013-05-13 22:09:00 +0100, :origin
 
 Check the [main.rb](main.rb) for additional usage.
 
+## Development
+
+### Testing
+
+Rather than having the test suite hit the API, this project is using [VCR](https://github.com/vcr/vcr) alongside [Timecop](https://github.com/travisjeffery/timecop) to use stubbed responses.  
+These responses are stored in the `fixtures/vcr_cassettes` directory and can be updated by running
+
+1. `rm -r fixtures`
+2. `rake test`
+
+As the API functionality is highly time dependent, Timecop is used to set/freeze time so that we can run time based queries on the older fixture data.
+
+---
+
 Pull requests welcome, because there's damn all in it at the moment. Please accompany the pull request with an appropriate test, and if you can, an example here in the README.
 
 

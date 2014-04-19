@@ -14,4 +14,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'rest-client', '~> 1.6', '>= 1.6.7'
   s.add_runtime_dependency 'nokogiri', '~> 1.6', '>= 1.6.1'
   s.add_runtime_dependency 'tzinfo', '~> 1.1', '>= 1.1.0'
+  s.add_development_dependency 'vcr', '~> 2.9.0'
+  s.add_development_dependency 'webmock', '~> 1.17.4'
+  s.add_development_dependency 'timecop', '~> 0.6.2'
 end
