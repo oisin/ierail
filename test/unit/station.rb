@@ -42,7 +42,7 @@ class StationTest < MiniTest::Unit::TestCase
   end
 
   def test_that_a_stations_has_an_id
-    refute_empty @station.id
+    refute_nil @station.id
   end
 end
 

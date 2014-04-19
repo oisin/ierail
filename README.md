@@ -56,7 +56,7 @@ trains = ir.southbound_from('malahide').in(N)
 ### Find out information for a specific train
 
 ```ruby
-trains = ir.station('clongriffin', 60)
+trains = ir.station_times('clongriffin', 60)
 
 trains.first.last_location # "Arrived Harmonstown"
 
@@ -72,6 +72,28 @@ trains.first.duein # "2"
 
 trains.first.late? # 0 || 1
 ```
+
+### Find out the movements of a specific train
+
+```ruby
+trains = ir.station_times('clongriffin', 60)
+
+train_code = trains.first.code
+
+train_movements = ir.train_movements(train_code) # Gets the movements of the train for today
+train_movements = ir.train_movements(train_code, date) # Gets the movements of train for some date
+
+fourth_stop = train_movements.at(4)
+
+fourth_stop.location #{:code => "GRGD", :location_full_name => "Clongriffin", :stop_number => 4, :location_type => "S"}
+
+fourth_stop.arrival # {:scheduled=>2013-05-13 22:09:00 +0100, :expected=>2013-05-13 22:10:00 +0100, :actual=2013-05-13 22:10:00 +0100}
+
+fourth_stop.departure # {:scheduled=>2013-05-13 22:09:00 +0100, :expected=>2013-05-13 22:10:00 +0100, :actual=2013-05-13 22:10:00 +0100}
+
+fourth_stop.train #{:code => "E808", :date => 2013-05-13 22:09:00 +0100, :origin => "Malahide"}
+```
+
 
 Check the [main.rb](main.rb) for additional usage.
 

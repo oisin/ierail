@@ -97,4 +97,27 @@ class IERailTest < MiniTest::Unit::TestCase
       end
     end
   end
+
+  def test_that_station_times_returns_station_data
+    train = @ir.station_times('Dublin Connolly', 30).sample #random train in next 30 mins
+    assert_equal train.class, StationData #StationData has already been tested
+  end
+
+  def test_that_station_times_equivalent_to_in
+    trains = @ir.station_times('Dublin Connolly', 30)
+    in_half_an_hour = @ir.station('Dublin Connolly').in(30)
+
+    assert_equal trains.count, in_half_an_hour.count
+    trains_codes = trains.map {|t| t.traincode}
+    half_hour_train_codes = in_half_an_hour.map {|t| t.traincode}
+    assert_equal trains_codes, half_hour_train_codes
+  end
+
+  def test_that_found_station_is_a_struct_with_name_description_code
+    station = @ir.find_station('con').sample
+    assert_equal station.class, Struct::Station
+    refute_nil station.name
+    refute_nil station.description
+    refute_nil station.code
+  end
 end

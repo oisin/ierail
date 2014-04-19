@@ -6,7 +6,7 @@ class Train
     @longitude = hash['TrainLongitude']
     @latitude  = hash['TrainLatitude']
     @code      = hash['TrainCode']
-    @date      = hash['TrainDate']
+    @date      = Date.parse hash['TrainDate']
     @message   = hash['PublicMessage']
     @direction = hash['Direction']
   end

@@ -6,7 +6,7 @@ class Station
     @latitude    = hash['StationLatitude']
     @longitude   = hash['StationLongitude']
     @code        = hash['StationCode']
-    @id          = hash['StationId']
+    @id          = hash['StationId'].to_i
   end
 
   def location
