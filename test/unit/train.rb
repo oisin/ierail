@@ -32,7 +32,7 @@ class TrainTest < MiniTest::Unit::TestCase
   end
 
   def test_that_a_train_has_a_date
-    refute_empty @train.date
+    refute_nil @train.date
   end
 
   def test_that_a_train_has_a_message

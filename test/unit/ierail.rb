@@ -53,12 +53,36 @@ class IERailTest < MiniTest::Unit::TestCase
     mins = 30
     thirty_mins = @now + (60 * mins)
     time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
-    before_train = @ir.southbound_from('Malahide').before(time)
 
+    before_train = @ir.southbound_from('Malahide').before(time)
     in_half_an_hour = @ir.southbound_from('Malahide').in(mins)
+
     assert_equal before_train.count, in_half_an_hour.count
-    before_train.each_with_index { |b,i|
-      assert_equal b.traincode, in_half_an_hour[i].traincode
-    }
+    before_train_codes = before_train.map {|t| t.traincode}
+    half_hour_train_codes = in_half_an_hour.map {|t| t.traincode}
+    assert_equal before_train_codes, half_hour_train_codes
+  end
+
+  def test_that_station_times_returns_station_data
+    train = @ir.station_times('Dublin Connolly', 30).sample #random train in next 30 mins
+    assert_equal train.class, StationData #StationData has already been tested
+  end
+
+  def test_that_station_times_equivalent_to_in
+    trains = @ir.station_times('Dublin Connolly', 30)
+    in_half_an_hour = @ir.station('Dublin Connolly').in(30)
+
+    assert_equal trains.count, in_half_an_hour.count
+    trains_codes = trains.map {|t| t.traincode}
+    half_hour_train_codes = in_half_an_hour.map {|t| t.traincode}
+    assert_equal trains_codes, half_hour_train_codes
+  end
+
+  def test_that_found_station_is_a_struct_with_name_description_code
+    station = @ir.find_station('con').sample
+    assert_equal station.class, Struct::Station
+    refute_nil station.name
+    refute_nil station.description
+    refute_nil station.code
   end
 end

@@ -43,8 +43,18 @@ class TrainMovementTest < MiniTest::Unit::TestCase
     refute_nil @train_movement.departure[:expected]
     refute_nil @train_movement.departure[:actual]
   end
-  
+
   def test_that_it_responds_to_station
     assert_respond_to @train_movement, :station
+  end
+
+  def test_that_train_method_returns_a_hash
+    assert_equal @train_movement.train.class, Hash
+  end
+
+  def test_that_there_is_a_train_code_date_and_origin
+    refute_nil @train_movement.train[:code]
+    refute_nil @train_movement.train[:date]
+    refute_nil @train_movement.train[:origin]
   end
 end 

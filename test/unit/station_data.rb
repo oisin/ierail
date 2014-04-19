@@ -11,6 +11,10 @@ class StationDataTest < MiniTest::Unit::TestCase
     @station_data = ir.station('Glenageary').sample
   end
 
+  def test_that_there_is_a_server_time
+    refute_nil @station_data.servertime
+  end
+
   def test_that_there_is_a_traincode
     refute_empty @station_data.traincode
   end
@@ -20,16 +24,24 @@ class StationDataTest < MiniTest::Unit::TestCase
     refute_empty @station_data.code
   end
 
+  def test_that_there_is_a_query_time
+    refute_nil @station_data.query_time
+  end
+
   def test_that_there_is_a_status
     refute_empty @station_data.status
   end
 
   def test_that_there_is_a_due_value
-   refute_empty @station_data.due_in
+   refute_nil @station_data.due_in
   end
 
-  def test_that_there_is_a_late_value
-    refute_empty @station_data.late
+  def test_that_there_is_a_minutes_early_value
+    refute_nil @station_data.minutes_early
+  end
+
+  def test_that_there_is_a_minutes_late_value
+    refute_nil @station_data.minutes_late
   end
 
   def test_that_there_is_a_query_time
@@ -37,7 +49,7 @@ class StationDataTest < MiniTest::Unit::TestCase
   end
 
   def test_that_there_is_a_train_date
-    refute_empty @station_data.train_date
+    refute_nil @station_data.train_date
   end
 
   def test_that_origin_method_returns_a_hash
@@ -78,5 +90,34 @@ class StationDataTest < MiniTest::Unit::TestCase
 
   def test_that_it_responds_to_late?
     assert_respond_to @station_data, :late? 
+  end
+
+  def test_that_late_not_early_or_on_time
+    if @station_data.late?
+      refute_same @station_data.late?, @station_data.early?
+      refute_same @station_data.late?, @station_data.on_time?
+    end
+  end
+
+  def test_that_it_responds_to_early?
+    assert_respond_to @station_data, :early?
+  end
+
+  def test_that_early_not_late_or_on_time
+    if @station_data.early?
+      refute_same @station_data.early?, @station_data.late?
+      refute_same @station_data.early?, @station_data.on_time?
+    end
+  end
+
+  def test_that_it_responds_to_on_time?
+    assert_respond_to @station_data, :on_time?
+  end
+
+  def test_that_on_time_not_early_or_late
+    if @station_data.on_time?
+      refute_same @station_data.on_time?, @station_data.early?
+      refute_same @station_data.on_time?, @station_data.late?
+    end
   end
 end 

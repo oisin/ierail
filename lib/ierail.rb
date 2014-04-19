@@ -108,8 +108,11 @@ class IERail
   #   obj#status =>"En Route", 
   #   obj#last_location =>"Arrived Killiney", 
   #   obj#duein / obj#due_in =>"6", 
-  #   obj#late =>"0", 
-  #   obj#late? => 0 / 1
+  #   obj#minutes_early => 0
+  #   obj#minutes_late => 0,
+  #   obj#on_time? => true / false,
+  #   obj#early? => true / false,
+  #   obj#late? => true / false,
   #   obj#arrival => {:scheduled => "10:09", :expected => "10:09"}
   #   obj#departure => {:scheduled => "10:09", :expected => "10:09"}
   #   obj#direction => "Northbound",
