@@ -38,7 +38,7 @@ class IERailTest < MiniTest::Unit::TestCase
     thirty_mins = @now + (60 * 30)
     time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
     before_train = @ir.southbound_from('Dublin Connolly').before(time).sample
-    assert before_train.expdepart <= thirty_mins
+    assert before_train.expected_departure <= thirty_mins
   end
 
   def test_that_the_after_time_constraint_works
@@ -46,7 +46,7 @@ class IERailTest < MiniTest::Unit::TestCase
     thirty_mins = @now + (60 * 30)
     time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
     after_train = @ir.southbound_from('Dublin Connolly').after(time).sample
-    assert after_train.expdepart >= thirty_mins
+    assert after_train.expected_departure >= thirty_mins
   end
 
   def test_that_the_in_constraint_works
@@ -58,8 +58,8 @@ class IERailTest < MiniTest::Unit::TestCase
     in_half_an_hour = @ir.southbound_from('Malahide').in(mins)
 
     assert_equal before_train.count, in_half_an_hour.count
-    before_train_codes = before_train.map {|t| t.traincode}
-    half_hour_train_codes = in_half_an_hour.map {|t| t.traincode}
+    before_train_codes = before_train.map {|t| t.train_code}
+    half_hour_train_codes = in_half_an_hour.map {|t| t.train_code}
     assert_equal before_train_codes, half_hour_train_codes
   end
 
@@ -73,8 +73,8 @@ class IERailTest < MiniTest::Unit::TestCase
     in_half_an_hour = @ir.station('Dublin Connolly').in(30)
 
     assert_equal trains.count, in_half_an_hour.count
-    trains_codes = trains.map {|t| t.traincode}
-    half_hour_train_codes = in_half_an_hour.map {|t| t.traincode}
+    trains_codes = trains.map {|t| t.train_code}
+    half_hour_train_codes = in_half_an_hour.map {|t| t.train_code}
     assert_equal trains_codes, half_hour_train_codes
   end
 

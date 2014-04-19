@@ -12,11 +12,11 @@ class StationDataTest < MiniTest::Unit::TestCase
   end
 
   def test_that_there_is_a_server_time
-    refute_nil @station_data.servertime
+    refute_nil @station_data.server_time
   end
 
   def test_that_there_is_a_traincode
-    refute_empty @station_data.traincode
+    refute_empty @station_data.train_code
   end
 
   def test_that_there_is_a_station_name_and_code
