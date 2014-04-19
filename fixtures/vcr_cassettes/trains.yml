@@ -25,218 +25,261 @@ http_interactions:
       Server:
       - ''
       Date:
-      - Fri, 18 Apr 2014 10:48:15 GMT
+      - Sat, 19 Apr 2014 07:25:17 GMT
       Content-Length:
-      - '16589'
+      - '20177'
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ArrayOfObjTrainPositions
         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
         xmlns=\"http://api.irishrail.ie/realtime/\">\r\n  <objTrainPositions>\r\n
-        \   <TrainStatus>N</TrainStatus>\r\n    <TrainLatitude>51.9112</TrainLatitude>\r\n
-        \   <TrainLongitude>-8.3254</TrainLongitude>\r\n    <TrainCode>P241</TrainCode>\r\n
-        \   <TrainDate>18 Apr 2014</TrainDate>\r\n    <PublicMessage>P241\\nGlounthaune
-        to Cork\\nExpected Departure 11:44</PublicMessage>\r\n    <Direction>To Cork</Direction>\r\n
+        \   <TrainStatus>N</TrainStatus>\r\n    <TrainLatitude>51.8491</TrainLatitude>\r\n
+        \   <TrainLongitude>-8.29956</TrainLongitude>\r\n    <TrainCode>P237</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>P237\\nCobh to
+        Cork\\nExpected Departure 08:30</PublicMessage>\r\n    <Direction>To Cork</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>N</TrainStatus>\r\n
-        \   <TrainLatitude>51.9212</TrainLatitude>\r\n    <TrainLongitude>-8.17579</TrainLongitude>\r\n
-        \   <TrainCode>P279</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>P279\\nMidleton to Cork\\nExpected Departure 11:45</PublicMessage>\r\n
-        \   <Direction>To Cork</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
-        \   <TrainStatus>N</TrainStatus>\r\n    <TrainLatitude>52.6587</TrainLatitude>\r\n
-        \   <TrainLongitude>-8.62397</TrainLongitude>\r\n    <TrainCode>A431</TrainCode>\r\n
-        \   <TrainDate>18 Apr 2014</TrainDate>\r\n    <PublicMessage>A431\\nLimerick
-        to Limerick Junction\\nExpected Departure 11:45</PublicMessage>\r\n    <Direction>To
-        Limerick Junction</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
-        \   <TrainStatus>N</TrainStatus>\r\n    <TrainLatitude>52.8386</TrainLatitude>\r\n
-        \   <TrainLongitude>-8.97491</TrainLongitude>\r\n    <TrainCode>B483</TrainCode>\r\n
-        \   <TrainDate>18 Apr 2014</TrainDate>\r\n    <PublicMessage>B483\\nEnnis
-        to Limerick\\nExpected Departure 11:46</PublicMessage>\r\n    <Direction>To
-        Limerick</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainLatitude>51.9018</TrainLatitude>\r\n    <TrainLongitude>-8.4582</TrainLongitude>\r\n
+        \   <TrainCode>P235</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>P235\\nCork to Mallow\\nExpected Departure 08:20</PublicMessage>\r\n
+        \   <Direction>To Mallow</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>N</TrainStatus>\r\n    <TrainLatitude>52.1396</TrainLatitude>\r\n
+        \   <TrainLongitude>-8.65521</TrainLongitude>\r\n    <TrainCode>D239</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>D239\\nMallow
+        to Cork\\nExpected Departure 08:30</PublicMessage>\r\n    <Direction>To Cork</Direction>\r\n
+        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>N</TrainStatus>\r\n
+        \   <TrainLatitude>53.1442</TrainLatitude>\r\n    <TrainLongitude>-6.06085</TrainLongitude>\r\n
+        \   <TrainCode>E906</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>E906\\nGreystones to Howth\\nExpected Departure 08:30</PublicMessage>\r\n
+        \   <Direction>Northbound</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
         \   <TrainStatus>N</TrainStatus>\r\n    <TrainLatitude>53.2043</TrainLatitude>\r\n
-        \   <TrainLongitude>-6.10046</TrainLongitude>\r\n    <TrainCode>E914</TrainCode>\r\n
-        \   <TrainDate>18 Apr 2014</TrainDate>\r\n    <PublicMessage>E914\\nBray to
-        Howth\\nExpected Departure 11:55</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>0</TrainLatitude>\r\n    <TrainLongitude>0</TrainLongitude>\r\n
-        \   <TrainCode>A208</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A208\\n10:00 - Dublin Heuston to Cork (1 mins late)\\nDeparted
-        LJ896 next stop Mallow</PublicMessage>\r\n    <Direction>To Cork</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>0</TrainLatitude>\r\n    <TrainLongitude>0</TrainLongitude>\r\n
-        \   <TrainCode>A210</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A210\\n11:00 - Dublin Heuston to Cork (-3 mins late)\\nDeparted
-        PL104 next stop Templemore</PublicMessage>\r\n    <Direction>To Cork</Direction>\r\n
+        \   <TrainLongitude>-6.10046</TrainLongitude>\r\n    <TrainCode>E905</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>E905\\nBray to
+        Howth\\nExpected Departure 08:25</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
+        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>N</TrainStatus>\r\n
+        \   <TrainLatitude>53.3464</TrainLatitude>\r\n    <TrainLongitude>-6.29461</TrainLongitude>\r\n
+        \   <TrainCode>D203</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>D203\\nDublin Heuston to Portlaoise\\nExpected Departure
+        08:30</PublicMessage>\r\n    <Direction>To Portlaoise</Direction>\r\n  </objTrainPositions>\r\n
+        \ <objTrainPositions>\r\n    <TrainStatus>N</TrainStatus>\r\n    <TrainLatitude>53.3891</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.07401</TrainLongitude>\r\n    <TrainCode>E241</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>E241\\nHowth
+        to Bray\\nExpected Departure 08:30</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
         \   <TrainLatitude>51.939</TrainLatitude>\r\n    <TrainLongitude>-8.50861</TrainLongitude>\r\n
-        \   <TrainCode>A206</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A206\\n09:00 - Dublin Heuston to Cork (0 mins late)\\nDeparted
+        \   <TrainCode>D237</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>D237\\n08:00 - Mallow to Cork (0 mins late)\\nDeparted
         Rathpeacon next stop Cork</PublicMessage>\r\n    <Direction>To Cork</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
         \   <TrainLatitude>52.1396</TrainLatitude>\r\n    <TrainLongitude>-8.65521</TrainLongitude>\r\n
-        \   <TrainCode>A213</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A213\\n11:20 - Cork to Dublin Heuston (-2 mins late)\\nDeparted
-        Mallow next stop Limerick Junction</PublicMessage>\r\n    <Direction>To Dublin
+        \   <TrainCode>A300</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>A300\\n06:45 - Cork to Tralee (1 mins late)\\nDeparted
+        Mallow next stop Banteer</PublicMessage>\r\n    <Direction>To Tralee</Direction>\r\n
+        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
+        \   <TrainLatitude>52.5828</TrainLatitude>\r\n    <TrainLongitude>-8.38682</TrainLongitude>\r\n
+        \   <TrainCode>A424</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>A424\\n08:07 - Limerick Junction to Limerick (0 mins late)\\nDeparted
+        Drumkeen next stop Limerick</PublicMessage>\r\n    <Direction>To Limerick</Direction>\r\n
+        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
+        \   <TrainLatitude>52.6404</TrainLatitude>\r\n    <TrainLongitude>-8.52719</TrainLongitude>\r\n
+        \   <TrainCode>A461</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>A461\\n06:30 - Limerick to Ballybrophy (0 mins late)\\nDeparted
+        Killonan next stop Castleconnell</PublicMessage>\r\n    <Direction>To Ballybrophy</Direction>\r\n
+        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
+        \   <TrainLatitude>52.6766</TrainLatitude>\r\n    <TrainLongitude>-7.82189</TrainLongitude>\r\n
+        \   <TrainCode>A202</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>A202\\n07:00 - Dublin Heuston to Cork (3 mins late)\\nDeparted
+        Thurles next stop Limerick Junction</PublicMessage>\r\n    <Direction>To Cork</Direction>\r\n
+        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
+        \   <TrainLatitude>52.6766</TrainLatitude>\r\n    <TrainLongitude>-7.82189</TrainLongitude>\r\n
+        \   <TrainCode>A205</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>A205\\n07:00 - Cork to Dublin Heuston (1 mins late)\\nDeparted
+        Thurles next stop Dublin Heuston</PublicMessage>\r\n    <Direction>To Dublin
         Heuston</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
-        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>52.1396</TrainLatitude>\r\n
-        \   <TrainLongitude>-8.65521</TrainLongitude>\r\n    <TrainCode>A304</TrainCode>\r\n
-        \   <TrainDate>18 Apr 2014</TrainDate>\r\n    <PublicMessage>A304\\n11:20
-        - Mallow to Tralee (3 mins late)\\nDeparted Mallow next stop Banteer</PublicMessage>\r\n
-        \   <Direction>To Tralee</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
-        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>52.5009</TrainLatitude>\r\n
-        \   <TrainLongitude>-8.20003</TrainLongitude>\r\n    <TrainCode>A472</TrainCode>\r\n
-        \   <TrainDate>18 Apr 2014</TrainDate>\r\n    <PublicMessage>A472\\n11:40
-        - Limerick Junction to Limerick (1 mins late)\\nDeparted Limerick Junction
-        next stop Limerick</PublicMessage>\r\n    <Direction>To Limerick</Direction>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>52.6766</TrainLatitude>\r\n
+        \   <TrainLongitude>-7.82189</TrainLongitude>\r\n    <TrainCode>A405</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>A405\\n07:40
+        - Limerick to Dublin Heuston (-3 mins late)\\nArrived Thurles next stop Templemore</PublicMessage>\r\n
+        \   <Direction>To Dublin Heuston</Direction>\r\n  </objTrainPositions>\r\n
+        \ <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>52.992</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.9762</TrainLongitude>\r\n    <TrainCode>A500</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>A500\\n07:25
+        - Dublin Heuston to Waterford (-2 mins late)\\nDeparted Athy next stop Carlow</PublicMessage>\r\n
+        \   <Direction>To Waterford</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>52.992</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.9762</TrainLongitude>\r\n    <TrainCode>A505</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>A505\\n07:10
+        - Waterford to Dublin Heuston (8 mins late)\\nDeparted Athy next stop Newbridge</PublicMessage>\r\n
+        \   <Direction>To Dublin Heuston</Direction>\r\n  </objTrainPositions>\r\n
+        \ <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.1454</TrainLatitude>\r\n
+        \   <TrainLongitude>-7.06361</TrainLongitude>\r\n    <TrainCode>D202</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>D202\\n07:30
+        - Dublin Heuston to Portlaoise (5 mins late)\\nDeparted Monasterevin next
+        stop Portarlington</PublicMessage>\r\n    <Direction>To Portlaoise</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>52.655</TrainLatitude>\r\n    <TrainLongitude>-7.24498</TrainLongitude>\r\n
-        \   <TrainCode>A509</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A509\\n11:00 - Waterford to Dublin Heuston (6 mins late)\\nDeparted
-        Kilkenny next stop Muine Bheag</PublicMessage>\r\n    <Direction>To Dublin
+        \   <TrainLatitude>53.1454</TrainLatitude>\r\n    <TrainLongitude>-7.06361</TrainLongitude>\r\n
+        \   <TrainCode>P207</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>P207\\n08:10 - Portlaoise to Dublin Heuston (-3 mins late)\\nArrived
+        Monasterevin next stop Kildare</PublicMessage>\r\n    <Direction>To Dublin
         Heuston</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
-        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>52.7878</TrainLatitude>\r\n
-        \   <TrainLongitude>-7.82293</TrainLongitude>\r\n    <TrainCode>A211</TrainCode>\r\n
-        \   <TrainDate>18 Apr 2014</TrainDate>\r\n    <PublicMessage>A211\\n10:20
-        - Cork to Dublin Heuston (-1 mins late)\\nArrived Templemore next stop Dublin
-        Heuston</PublicMessage>\r\n    <Direction>To Dublin Heuston</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>52.992</TrainLatitude>\r\n    <TrainLongitude>-6.9762</TrainLongitude>\r\n
-        \   <TrainCode>A504</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A504\\n10:15 - Dublin Heuston to Waterford (-1 mins late)\\nDeparted
-        Athy next stop Carlow</PublicMessage>\r\n    <Direction>To Waterford</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.1442</TrainLatitude>\r\n    <TrainLongitude>-6.06085</TrainLongitude>\r\n
-        \   <TrainCode>A602</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A602\\n09:40 - Dublin Connolly to Rosslare Europort (0
-        mins late)\\nDeparted Greystones next stop Wicklow</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.163</TrainLatitude>\r\n    <TrainLongitude>-6.90802</TrainLongitude>\r\n
-        \   <TrainCode>P210</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>P210\\n11:15 - Portlaoise to Dublin Heuston (2 mins late)\\nDeparted
-        Kildare next stop Newbridge</PublicMessage>\r\n    <Direction>To Dublin Heuston</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.1855</TrainLatitude>\r\n    <TrainLongitude>-6.80807</TrainLongitude>\r\n
-        \   <TrainCode>A704</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A704\\n11:25 - Dublin Heuston to Galway (0 mins late)\\nArrived
-        Newbridge next stop Portarlington</PublicMessage>\r\n    <Direction>To Galway</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.2469</TrainLatitude>\r\n    <TrainLongitude>-6.66386</TrainLongitude>\r\n
-        \   <TrainCode>A709</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A709\\n09:30 - Galway to Dublin Heuston (6 mins late)\\nDeparted
-        Sallins next stop Dublin Heuston</PublicMessage>\r\n    <Direction>To Dublin
-        Heuston</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
-        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.2469</TrainLatitude>\r\n
-        \   <TrainLongitude>-6.66386</TrainLongitude>\r\n    <TrainCode>D206</TrainCode>\r\n
-        \   <TrainDate>18 Apr 2014</TrainDate>\r\n    <PublicMessage>D206\\n11:20
-        - Dublin Heuston to Portlaoise (-1 mins late)\\nArrived Sallins next stop
-        Newbridge</PublicMessage>\r\n    <Direction>To Portlaoise</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.2557</TrainLatitude>\r\n    <TrainLongitude>-6.11317</TrainLongitude>\r\n
-        \   <TrainCode>E210</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>E210\\n10:45 - Howth to Bray (2 mins late)\\nArrived Killiney
-        next stop Shankill</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.2557</TrainLatitude>\r\n    <TrainLongitude>-6.11317</TrainLongitude>\r\n
-        \   <TrainCode>E812</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>E812\\n11:30 - Greystones to Malahide (1 mins late)\\nDeparted
-        Killiney next stop Dalkey</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.2991</TrainLatitude>\r\n    <TrainLongitude>-6.16512</TrainLongitude>\r\n
-        \   <TrainCode>E913</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>E913\\n11:25 - Bray to Howth (0 mins late)\\nArrived Seapoint
-        next stop Blackrock</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.163</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.90802</TrainLongitude>\r\n    <TrainCode>A403</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>A403\\n06:40
+        - Limerick to Dublin Heuston (0 mins late)\\nDeparted Kildare next stop Sallins</PublicMessage>\r\n
+        \   <Direction>To Dublin Heuston</Direction>\r\n  </objTrainPositions>\r\n
+        \ <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.1855</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.80807</TrainLongitude>\r\n    <TrainCode>A204</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>A204\\n08:00
+        - Dublin Heuston to Cork (0 mins late)\\nDeparted Newbridge next stop Templemore</PublicMessage>\r\n
+        \   <Direction>To Cork</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.2135</TrainLatitude>\r\n
+        \   <TrainLongitude>-7.35205</TrainLongitude>\r\n    <TrainCode>A700</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>A700\\n07:35
+        - Dublin Heuston to Galway (0 mins late)\\nDeparted Geashill next stop Tullamore</PublicMessage>\r\n
+        \   <Direction>To Galway</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.2364</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.11691</TrainLongitude>\r\n    <TrainCode>E203</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>E203\\n07:15
+        - Howth to Bray (3 mins late)\\nDeparted Shankill next stop Bray</PublicMessage>\r\n
+        \   <Direction>Southbound</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.2751</TrainLatitude>\r\n
+        \   <TrainLongitude>-8.94792</TrainLongitude>\r\n    <TrainCode>A730</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>A730\\n07:30
+        - Athlone to Galway (-2 mins late)\\nDeparted Oranmore next stop Galway</PublicMessage>\r\n
+        \   <Direction>To Galway</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.2812</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.12289</TrainLongitude>\r\n    <TrainCode>E240</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>E240\\n07:30
+        - Malahide to Bray (0 mins late)\\nDeparted Glenageary next stop Dalkey</PublicMessage>\r\n
+        \   <Direction>Southbound</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.2878</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.12712</TrainLongitude>\r\n    <TrainCode>E805</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>E805\\n08:10
+        - Bray to Malahide (-1 mins late)\\nArrived Sandycove next stop Dun Laoghaire</PublicMessage>\r\n
+        \   <Direction>Northbound</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.3027</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.17833</TrainLongitude>\r\n    <TrainCode>A605</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>A605\\n06:45
+        - Gorey to Dundalk (-2 mins late)\\nArrived Blackrock next stop Lansdowne
+        Road</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n  </objTrainPositions>\r\n
+        \ <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.3206</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.21112</TrainLongitude>\r\n    <TrainCode>E204</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>E204\\n07:45
+        - Howth to Bray (0 mins late)\\nDeparted Sydney Parade next stop Booterstown</PublicMessage>\r\n
+        \   <Direction>Southbound</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.3206</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.21112</TrainLongitude>\r\n    <TrainCode>E904</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>E904\\n07:54
+        - Bray to Howth (2 mins late)\\nDeparted Sydney Parade next stop Sandymount</PublicMessage>\r\n
+        \   <Direction>Northbound</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.334</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.37868</TrainLongitude>\r\n    <TrainCode>A203</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>A203\\n06:00
+        - Cork to Dublin Heuston (-2 mins late)\\nDeparted Cherry Orchard next stop
+        Dublin Heuston</PublicMessage>\r\n    <Direction>To Dublin Heuston</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
         \   <TrainLatitude>53.334</TrainLatitude>\r\n    <TrainLongitude>-6.37868</TrainLongitude>\r\n
-        \   <TrainCode>A209</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A209\\n09:20 - Cork to Dublin Heuston (2 mins late)\\nDeparted
+        \   <TrainCode>A705</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>A705\\n06:30 - Galway to Dublin Heuston (-8 mins late)\\nDeparted
         Cherry Orchard next stop Dublin Heuston</PublicMessage>\r\n    <Direction>To
         Dublin Heuston</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
         \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.334</TrainLatitude>\r\n
-        \   <TrainLongitude>-6.37868</TrainLongitude>\r\n    <TrainCode>P209</TrainCode>\r\n
-        \   <TrainDate>18 Apr 2014</TrainDate>\r\n    <PublicMessage>P209\\n10:22
-        - Portlaoise to Dublin Heuston (6 mins late)\\nDeparted Cherry Orchard next
-        stop Dublin Heuston</PublicMessage>\r\n    <Direction>To Dublin Heuston</Direction>\r\n
+        \   <TrainLongitude>-6.37868</TrainLongitude>\r\n    <TrainCode>A801</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>A801\\n06:55
+        - Athlone to Dublin Heuston (0 mins late)\\nDeparted Cherry Orchard next stop
+        Dublin Heuston</PublicMessage>\r\n    <Direction>To Dublin Heuston</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.3363</TrainLatitude>\r\n    <TrainLongitude>-8.24081</TrainLongitude>\r\n
-        \   <TrainCode>A711</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A711\\n11:05 - Galway to Dublin Heuston (-4 mins late)\\nArrived
-        Ballinasloe next stop Athlone</PublicMessage>\r\n    <Direction>To Dublin
-        Heuston</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
-        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.3395</TrainLatitude>\r\n
-        \   <TrainLongitude>-7.61596</TrainLongitude>\r\n    <TrainCode>A805</TrainCode>\r\n
-        \   <TrainDate>18 Apr 2014</TrainDate>\r\n    <PublicMessage>A805\\n09:45
-        - Westport to Dublin Heuston (0 mins late)\\nArrived Clara next stop Tullamore</PublicMessage>\r\n
-        \   <Direction>To Dublin Heuston</Direction>\r\n  </objTrainPositions>\r\n
-        \ <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.3531</TrainLatitude>\r\n
-        \   <TrainLongitude>-6.24591</TrainLongitude>\r\n    <TrainCode>D806</TrainCode>\r\n
-        \   <TrainDate>18 Apr 2014</TrainDate>\r\n    <PublicMessage>D806\\n11:45
-        - Dublin Connolly to Drogheda (2 mins late)\\nDeparted Dublin Connolly next
-        stop Malahide</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <TrainLatitude>53.334</TrainLatitude>\r\n    <TrainLongitude>-6.37868</TrainLongitude>\r\n
+        \   <TrainCode>P205</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>P205\\n07:20 - Portlaoise to Dublin Heuston (-1 mins late)\\nDeparted
+        Cherry Orchard next stop Dublin Heuston</PublicMessage>\r\n    <Direction>To
+        Dublin Heuston</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.3531</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.24591</TrainLongitude>\r\n    <TrainCode>E804</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>E804\\n07:30
+        - Greystones to Malahide (0 mins late)\\nDeparted Dublin Connolly next stop
+        Clontarf Road</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.3531</TrainLatitude>\r\n    <TrainLongitude>-6.24591</TrainLongitude>\r\n
-        \   <TrainCode>D911</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>D911\\n11:40 - Dublin Pearse to Maynooth (0 mins late)\\nDeparted
-        Dublin Connolly next stop Drumcondra</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <TrainLatitude>53.3629</TrainLatitude>\r\n    <TrainLongitude>-6.22753</TrainLongitude>\r\n
+        \   <TrainCode>E104</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>E104\\n08:02 - Howth to Greystones (0 mins late)\\nDeparted
+        Clontarf Road next stop Dublin Connolly</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
         \   <TrainLatitude>53.3704</TrainLatitude>\r\n    <TrainLongitude>-6.50598</TrainLongitude>\r\n
-        \   <TrainCode>P658</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>P658\\n11:43 - Maynooth to Dublin Pearse (-1 mins late)\\nArrived
-        Leixlip (Louisa Bridge) next stop Leixlip (Confey)</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.3725</TrainLatitude>\r\n    <TrainLongitude>-6.29869</TrainLongitude>\r\n
-        \   <TrainCode>A905</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A905\\n09:00 - Sligo to Dublin Connolly (-1 mins late)\\nDeparted
-        Broombridge next stop Dublin Connolly</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <TrainCode>A902</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>A902\\n08:00 - Dublin Connolly to Sligo (1 mins late)\\nDeparted
+        Leixlip (Louisa Bridge) next stop Maynooth</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
         \   <TrainLatitude>53.373</TrainLatitude>\r\n    <TrainLongitude>-6.20442</TrainLongitude>\r\n
-        \   <TrainCode>E912</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>E912\\n10:55 - Bray to Howth (1 mins late)\\nDeparted Killester
-        next stop Harmonstown</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <TrainCode>P621</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>P621\\n07:05 - Dundalk to Dublin Pearse (0 mins late)\\nDeparted
+        Killester next stop Dublin Connolly</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.378</TrainLatitude>\r\n    <TrainLongitude>-6.58993</TrainLongitude>\r\n
-        \   <TrainCode>A904</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A904\\n11:05 - Dublin Connolly to Sligo (2 mins late)\\nDeparted
-        Maynooth next stop Kilcock</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <TrainLatitude>53.3755</TrainLatitude>\r\n    <TrainLongitude>-6.33135</TrainLongitude>\r\n
+        \   <TrainCode>P652</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>P652\\n07:58 - Maynooth to Dublin Pearse (0 mins late)\\nArrived
+        Ashtown next stop Broombridge</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.3853</TrainLatitude>\r\n    <TrainLongitude>-6.44205</TrainLongitude>\r\n
-        \   <TrainCode>P307</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>P307\\n11:38 - M3 Parkway to Clonsilla (0 mins late)\\nArrived
-        Hansfield next stop Clonsilla</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <TrainLatitude>53.3909</TrainLatitude>\r\n    <TrainLongitude>-6.15672</TrainLongitude>\r\n
+        \   <TrainCode>E903</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>E903\\n07:25 - Bray to Howth (1 mins late)\\nDeparted Howth
+        Junction next stop Bayside</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.3891</TrainLatitude>\r\n    <TrainLongitude>-6.07401</TrainLongitude>\r\n
-        \   <TrainCode>E212</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>E212\\n11:45 - Howth to Bray (0 mins late)\\nDeparted Howth
-        next stop Sutton</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
+        \   <TrainLatitude>53.4032</TrainLatitude>\r\n    <TrainLongitude>-6.14839</TrainLongitude>\r\n
+        \   <TrainCode>E205</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>E205\\n08:18 - Malahide to Bray (0 mins late)\\nArrived
+        Clongriffin next stop Howth Junction</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.4169</TrainLatitude>\r\n    <TrainLongitude>-6.1512</TrainLongitude>\r\n
-        \   <TrainCode>E810</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>E810\\n10:30 - Greystones to Malahide (0 mins late)\\nDeparted
-        Portmarnock next stop Malahide</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <TrainLatitude>53.4175</TrainLatitude>\r\n    <TrainLongitude>-6.46483</TrainLongitude>\r\n
+        \   <TrainCode>D330</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>D330\\n08:15 - Clonsilla to M3 Parkway (0 mins late)\\nArrived
+        Dunboyne next stop M3 Parkway</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
+        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
+        \   <TrainLatitude>53.4273</TrainLatitude>\r\n    <TrainLongitude>-7.93683</TrainLongitude>\r\n
+        \   <TrainCode>A707</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>A707\\n07:30 - Galway to Dublin Heuston (-1 mins late)\\nDeparted
+        Athlone next stop Tullamore</PublicMessage>\r\n    <Direction>To Dublin Heuston</Direction>\r\n
+        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
+        \   <TrainLatitude>53.4855</TrainLatitude>\r\n    <TrainLongitude>-6.15134</TrainLongitude>\r\n
+        \   <TrainCode>D801</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>D801\\n07:53 - Dublin Pearse to Drogheda (-1 mins late)\\nArrived
+        Donabate next stop Rush and Lusk</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
         \   <TrainLatitude>53.5741</TrainLatitude>\r\n    <TrainLongitude>-6.11933</TrainLongitude>\r\n
-        \   <TrainCode>P609</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>P609\\n11:00 - Dundalk to Dublin Pearse (3 mins late)\\nDeparted
+        \   <TrainCode>P606</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>P606\\n08:00 - Drogheda to Dublin Pearse (1 mins late)\\nDeparted
         Skerries next stop Rush and Lusk</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.6118</TrainLatitude>\r\n    <TrainLongitude>-6.18226</TrainLongitude>\r\n
-        \   <TrainCode>D805</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>D805\\n10:57 - Dublin Pearse to Dundalk (0 mins late)\\nDeparted
-        Balbriggan next stop Gormanston</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
         \   <TrainLatitude>53.712</TrainLatitude>\r\n    <TrainLongitude>-6.33538</TrainLongitude>\r\n
-        \   <TrainCode>A124</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A124\\n09:35 - Dublin Connolly to Belfast Central (-3 mins
-        late)\\nArrived Drogheda next stop Dundalk</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
-        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>R</TrainStatus>\r\n
-        \   <TrainLatitude>53.712</TrainLatitude>\r\n    <TrainLongitude>-6.33538</TrainLongitude>\r\n
-        \   <TrainCode>A126</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A126\\n11:00 - Dublin Connolly to Belfast Central (-3 mins
-        late)\\nArrived Drogheda next stop Dundalk</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
+        \   <TrainCode>A121</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>A121\\n06:50 - Belfast Central to Dublin Connolly (-10
+        mins late)\\nArrived Drogheda next stop Dublin Connolly</PublicMessage>\r\n
+        \   <Direction>Southbound</Direction>\r\n  </objTrainPositions>\r\n  <objTrainPositions>\r\n
+        \   <TrainStatus>R</TrainStatus>\r\n    <TrainLatitude>53.712</TrainLatitude>\r\n
+        \   <TrainLongitude>-6.33538</TrainLongitude>\r\n    <TrainCode>A122</TrainCode>\r\n
+        \   <TrainDate>19 Apr 2014</TrainDate>\r\n    <PublicMessage>A122\\n07:35
+        - Dublin Connolly to Belfast Central (-3 mins late)\\nArrived Drogheda next
+        stop Dundalk</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
         \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>T</TrainStatus>\r\n
-        \   <TrainLatitude>53.2736</TrainLatitude>\r\n    <TrainLongitude>-9.04696</TrainLongitude>\r\n
-        \   <TrainCode>A702</TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <PublicMessage>A702\\n09:25 - Dublin Heuston to Galway(-6 mins late)\\nTERMINATED
-        Galway at 11:40</PublicMessage>\r\n    <Direction>To Galway</Direction>\r\n
+        \   <TrainLatitude>52.1396</TrainLatitude>\r\n    <TrainLongitude>-8.65521</TrainLongitude>\r\n
+        \   <TrainCode>P234</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>P234\\n08:00 - Cork to Mallow(-4 mins late)\\nTERMINATED
+        Mallow at 08:20</PublicMessage>\r\n    <Direction>To Mallow</Direction>\r\n
+        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>T</TrainStatus>\r\n
+        \   <TrainLatitude>53.1442</TrainLatitude>\r\n    <TrainLongitude>-6.06085</TrainLongitude>\r\n
+        \   <TrainCode>E102</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>E102\\n07:00 - Malahide to Greystones(0 mins late)\\nTERMINATED
+        Greystones at 08:20</PublicMessage>\r\n    <Direction>Southbound</Direction>\r\n
+        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>T</TrainStatus>\r\n
+        \   <TrainLatitude>53.378</TrainLatitude>\r\n    <TrainLongitude>-6.58993</TrainLongitude>\r\n
+        \   <TrainCode>D905</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>D905\\n07:40 - Dublin Pearse to Maynooth(-1 mins late)\\nTERMINATED
+        Maynooth at 08:22</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
+        \ </objTrainPositions>\r\n  <objTrainPositions>\r\n    <TrainStatus>T</TrainStatus>\r\n
+        \   <TrainLatitude>53.3891</TrainLatitude>\r\n    <TrainLongitude>-6.07401</TrainLongitude>\r\n
+        \   <TrainCode>E943</TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <PublicMessage>E943\\n07:10 - Bray to Howth(-2 mins late)\\nTERMINATED
+        Howth at 08:17</PublicMessage>\r\n    <Direction>Northbound</Direction>\r\n
         \ </objTrainPositions>\r\n</ArrayOfObjTrainPositions>"
     http_version: 
-  recorded_at: Fri, 18 Apr 2014 10:48:16 GMT
+  recorded_at: Sat, 19 Apr 2014 07:25:19 GMT
 recorded_with: VCR 2.9.0

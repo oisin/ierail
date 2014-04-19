@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.irishrail.ie/realtime/realtime.asmx/getTrainMovementsXML?TrainDate=18/04/2014&TrainId=P241
+    uri: http://api.irishrail.ie/realtime/realtime.asmx/getTrainMovementsXML?TrainDate=19/04/2014&TrainId=P237
     body:
       encoding: US-ASCII
       string: ''
@@ -25,38 +25,70 @@ http_interactions:
       Server:
       - ''
       Date:
-      - Fri, 18 Apr 2014 10:48:19 GMT
+      - Sat, 19 Apr 2014 07:25:18 GMT
       Content-Length:
-      - '2308'
+      - '5013'
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ArrayOfObjTrainMovements
         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
         xmlns=\"http://api.irishrail.ie/realtime/\">\r\n  <objTrainMovements>\r\n
-        \   <TrainCode>P241 </TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <LocationCode>GHANE</LocationCode>\r\n    <LocationFullName>Glounthaune</LocationFullName>\r\n
+        \   <TrainCode>P237 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>COBH</LocationCode>\r\n    <LocationFullName>Cobh</LocationFullName>\r\n
         \   <LocationOrder>1</LocationOrder>\r\n    <LocationType>O</LocationType>\r\n
-        \   <TrainOrigin>Glounthaune</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
-        \   <ScheduledArrival>00:00:00</ScheduledArrival>\r\n    <ScheduledDeparture>11:44:00</ScheduledDeparture>\r\n
-        \   <ExpectedArrival>00:00:00</ExpectedArrival>\r\n    <ExpectedDeparture>11:44:00</ExpectedDeparture>\r\n
+        \   <TrainOrigin>Cobh</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
+        \   <ScheduledArrival>00:00:00</ScheduledArrival>\r\n    <ScheduledDeparture>08:30:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>00:00:00</ExpectedArrival>\r\n    <ExpectedDeparture>08:30:00</ExpectedDeparture>\r\n
         \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
         />\r\n    <StopType>C</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
-        \   <TrainCode>P241 </TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
-        \   <LocationCode>LSLND</LocationCode>\r\n    <LocationFullName>LittleIsland</LocationFullName>\r\n
+        \   <TrainCode>P237 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>RBROK</LocationCode>\r\n    <LocationFullName>Rushbrooke</LocationFullName>\r\n
         \   <LocationOrder>2</LocationOrder>\r\n    <LocationType>S</LocationType>\r\n
-        \   <TrainOrigin>Glounthaune</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
-        \   <ScheduledArrival>11:46:30</ScheduledArrival>\r\n    <ScheduledDeparture>11:47:00</ScheduledDeparture>\r\n
-        \   <ExpectedArrival>11:46:30</ExpectedArrival>\r\n    <ExpectedDeparture>11:47:00</ExpectedDeparture>\r\n
+        \   <TrainOrigin>Cobh</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
+        \   <ScheduledArrival>08:32:30</ScheduledArrival>\r\n    <ScheduledDeparture>08:33:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>08:32:30</ExpectedArrival>\r\n    <ExpectedDeparture>08:33:00</ExpectedDeparture>\r\n
         \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
         />\r\n    <StopType>N</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
-        \   <TrainCode>P241 </TrainCode>\r\n    <TrainDate>18 Apr 2014</TrainDate>\r\n
+        \   <TrainCode>P237 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>CGLOE</LocationCode>\r\n    <LocationFullName>Carrigaloe</LocationFullName>\r\n
+        \   <LocationOrder>3</LocationOrder>\r\n    <LocationType>S</LocationType>\r\n
+        \   <TrainOrigin>Cobh</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
+        \   <ScheduledArrival>08:36:00</ScheduledArrival>\r\n    <ScheduledDeparture>08:36:30</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>08:36:00</ExpectedArrival>\r\n    <ExpectedDeparture>08:36:30</ExpectedDeparture>\r\n
+        \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
+        />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
+        \   <TrainCode>P237 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>FOTA</LocationCode>\r\n    <LocationFullName>Fota</LocationFullName>\r\n
+        \   <LocationOrder>4</LocationOrder>\r\n    <LocationType>S</LocationType>\r\n
+        \   <TrainOrigin>Cobh</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
+        \   <ScheduledArrival>08:39:30</ScheduledArrival>\r\n    <ScheduledDeparture>08:40:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>08:39:30</ExpectedArrival>\r\n    <ExpectedDeparture>08:40:00</ExpectedDeparture>\r\n
+        \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
+        />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
+        \   <TrainCode>P237 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>GHANE</LocationCode>\r\n    <LocationFullName>Glounthaune</LocationFullName>\r\n
+        \   <LocationOrder>5</LocationOrder>\r\n    <LocationType>S</LocationType>\r\n
+        \   <TrainOrigin>Cobh</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
+        \   <ScheduledArrival>08:43:30</ScheduledArrival>\r\n    <ScheduledDeparture>08:44:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>08:43:30</ExpectedArrival>\r\n    <ExpectedDeparture>08:44:00</ExpectedDeparture>\r\n
+        \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
+        />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
+        \   <TrainCode>P237 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>LSLND</LocationCode>\r\n    <LocationFullName>LittleIsland</LocationFullName>\r\n
+        \   <LocationOrder>6</LocationOrder>\r\n    <LocationType>S</LocationType>\r\n
+        \   <TrainOrigin>Cobh</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
+        \   <ScheduledArrival>08:46:30</ScheduledArrival>\r\n    <ScheduledDeparture>08:47:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>08:46:30</ExpectedArrival>\r\n    <ExpectedDeparture>08:47:00</ExpectedDeparture>\r\n
+        \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
+        />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
+        \   <TrainCode>P237 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
         \   <LocationCode>CORK</LocationCode>\r\n    <LocationFullName>Cork</LocationFullName>\r\n
-        \   <LocationOrder>3</LocationOrder>\r\n    <LocationType>D</LocationType>\r\n
-        \   <TrainOrigin>Glounthaune</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
-        \   <ScheduledArrival>11:54:00</ScheduledArrival>\r\n    <ScheduledDeparture>00:00:00</ScheduledDeparture>\r\n
-        \   <ExpectedArrival>11:54:00</ExpectedArrival>\r\n    <ExpectedDeparture>00:00:00</ExpectedDeparture>\r\n
+        \   <LocationOrder>7</LocationOrder>\r\n    <LocationType>D</LocationType>\r\n
+        \   <TrainOrigin>Cobh</TrainOrigin>\r\n    <TrainDestination>Cork</TrainDestination>\r\n
+        \   <ScheduledArrival>08:54:00</ScheduledArrival>\r\n    <ScheduledDeparture>00:00:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>08:54:00</ExpectedArrival>\r\n    <ExpectedDeparture>00:00:00</ExpectedDeparture>\r\n
         \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
         />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n</ArrayOfObjTrainMovements>"
     http_version: 
-  recorded_at: Fri, 18 Apr 2014 10:48:19 GMT
+  recorded_at: Sat, 19 Apr 2014 07:25:19 GMT
 recorded_with: VCR 2.9.0
