@@ -152,11 +152,8 @@ class IERail
   #
   def train_movements(code, date=Time.now)
     ier = IERailGet.new("getTrainMovementsXML?TrainId=#{code}&TrainDate=#{date.strftime("%d/%m/%Y")}", "ArrayOfObjTrainMovements", "ObjTrainMovements")
-    retval = []
-    ier.response.each do |tm|
-      retval << TrainMovement.new(tm)
-    end
-    retval
+    
+    ier.response.map{ |tm| TrainMovement.new(tm) }
   end
   
   # Find station codes and descriptions using a partial string to match the station name
