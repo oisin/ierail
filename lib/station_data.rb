@@ -35,7 +35,7 @@ class StationData
     @expected_arrival           = is_departure_station ? @origin_time : Time.parse(hash['Exparrival'])
     @expected_departure         = is_terminating_station ? @destination_time : Time.parse(hash['Expdepart'])
     @scheduled_arrival          = is_departure_station ? @origin_time + off_schedule_minutes : Time.parse(hash['Scharrival'])
-    @schdeuled_departure        = is_terminating_station ? @destination_time + off_schedule_minutes : Time.parse(hash['Schdepart'])
+    @scheduled_departure        = is_terminating_station ? @destination_time + off_schedule_minutes : Time.parse(hash['Schdepart'])
     @direction                  = hash['Direction']
     @train_type                 = hash['Traintype']
   end
@@ -53,7 +53,7 @@ class StationData
   end
 
   def departure
-    {scheduled: @schdeuled_departure, expected: @expected_departure}
+    {scheduled: @scheduled_departure, expected: @expected_departure}
   end
 
   def late?
