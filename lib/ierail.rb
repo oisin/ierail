@@ -97,8 +97,8 @@ class IERail
   # Get train information for a particular station, by station name. This gives data on trains thru that station
   # Returns array of StationData objects, and each object responds to
   # {
-  #   obj#servertime =>"2012-01-20T10:03:33.777", 
-  #   obj#traincode =>"E909", 
+  #   obj#server_time =>"2012-01-20T10:03:33.777", 
+  #   obj#train_code =>"E909", 
   #   obj#name / obj#station_name =>"Glenageary", 
   #   obj#code / obj#station_code =>"GLGRY", 
   #   obj#query_time =>"10:03:33", 
@@ -107,7 +107,7 @@ class IERail
   #   obj#destination => {:name => "Howth", :time => "11:03"} 
   #   obj#status =>"En Route", 
   #   obj#last_location =>"Arrived Killiney", 
-  #   obj#duein / obj#due_in =>"6", 
+  #   obj#due_in =>"6", 
   #   obj#minutes_early => 0
   #   obj#minutes_late => 0,
   #   obj#on_time? => true / false,
