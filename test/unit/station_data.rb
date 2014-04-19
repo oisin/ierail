@@ -15,7 +15,7 @@ class StationDataTest < MiniTest::Unit::TestCase
     refute_nil @station_data.server_time
   end
 
-  def test_that_there_is_a_traincode
+  def test_that_there_is_a_train_code
     refute_empty @station_data.train_code
   end
 
@@ -32,7 +32,7 @@ class StationDataTest < MiniTest::Unit::TestCase
     refute_empty @station_data.status
   end
 
-  def test_that_there_is_a_due_value
+  def test_that_there_is_a_due_in_value
    refute_nil @station_data.due_in
   end
 
@@ -74,7 +74,7 @@ class StationDataTest < MiniTest::Unit::TestCase
     assert_equal @station_data.arrival.class, Hash
   end
 
-  def test_that_there_is_an_arrival_sched_and_exp
+  def test_that_there_is_an_arrival_scheduled_and_expected
     refute_nil @station_data.arrival[:scheduled]
     refute_nil @station_data.arrival[:expected]
   end
@@ -83,7 +83,7 @@ class StationDataTest < MiniTest::Unit::TestCase
     assert_equal @station_data.departure.class, Hash
   end
 
-  def test_that_there_is_a_departure_sched_and_exp
+  def test_that_there_is_a_departure_scheduled_and_expected
     refute_nil @station_data.departure[:scheduled]
     refute_nil @station_data.departure[:expected]
   end
