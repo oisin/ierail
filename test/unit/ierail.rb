@@ -22,8 +22,8 @@ class IERailTest < MiniTest::Unit::TestCase
   end
 
   def test_that_the_train_directions_are_correct
-    northbound_train = @ir.northbound_from('Howth Junction').sample
-    southbound_train = @ir.southbound_from('Clongriffin').sample
+    northbound_train = @ir.northbound_from('Dublin Connolly').sample
+    southbound_train = @ir.southbound_from('Dublin Connolly').sample
     assert_equal northbound_train.direction, 'Northbound'
     assert_equal southbound_train.direction, 'Southbound'
   end
