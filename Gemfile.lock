@@ -39,7 +39,7 @@ GEM
       tins (~> 1.0)
     thor (0.19.1)
     thread_safe (0.3.3)
-    timecop (0.6.3)
+    timecop (0.7.1)
     tins (1.1.0)
     tzinfo (1.1.0)
       thread_safe (~> 0.1)
@@ -55,6 +55,6 @@ DEPENDENCIES
   coveralls
   ierail!
   rake
-  timecop (~> 0.6.2)
-  vcr (~> 2.9.0)
-  webmock (~> 1.17.4)
+  timecop (~> 0.6, >= 0.6.2)
+  vcr (~> 2.9, >= 2.9.0)
+  webmock (~> 1.17, >= 1.17.4)
