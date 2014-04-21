@@ -2,28 +2,40 @@ $:.unshift(File.join(File.dirname(__FILE__), '..','..', 'lib'))
 
 require_relative 'helper'
 
-require 'minitest/autorun'
-require 'ierail'
-
 class TrainMovementTest < MiniTest::Unit::TestCase
   def setup
     ir = IERail.new
-        
-    train_code = ir.trains.sample.code #Use a random train code
-    @train_movement = ir.train_movements(train_code).sample #Use a random movement from the random train
+
+    VCR.configure do |c|
+      c.cassette_library_dir = 'fixtures/vcr_cassettes'
+      c.hook_into :webmock
+    end
+
+    VCR.use_cassette('trains') do
+      @train_code = ir.trains.first.code #Use a random train code
+
+      VCR.use_cassette('train_movements') do
+       # The hard-code of the Time here is to match the VCR cassette
+       # for this API call - otherwise we re-create all the fixtures,
+       # all the time, electrons squandered, early heat-death of
+       # universe ensues, exuent omnes, persued by entropy.
+       sample_t = Time.new(2014, 4, 19)
+       @train_movement = ir.train_movements(@train_code, sample_t).sample #Use a random movement from the random train
+      end
+    end
   end
-    
+
   def test_that_location_method_returns_a_hash
     assert_equal @train_movement.location.class, Hash
   end
-  
+
   def test_that_there_is_a_location_code_and_name_and_stop_number_and_type
     refute_empty @train_movement.location[:code]
     refute_empty @train_movement.location[:name]
     refute_nil @train_movement.location[:stop_number]
     refute_empty @train_movement.location[:type]
   end
-  
+
   def test_that_arrival_method_returns_a_hash
     assert_equal @train_movement.arrival.class, Hash
   end
@@ -33,7 +45,7 @@ class TrainMovementTest < MiniTest::Unit::TestCase
     refute_nil @train_movement.arrival[:expected]
     refute_nil @train_movement.arrival[:actual]
   end
-  
+
   def test_that_departure_method_returns_a_hash
     assert_equal @train_movement.departure.class, Hash
   end
@@ -57,4 +69,4 @@ class TrainMovementTest < MiniTest::Unit::TestCase
     refute_nil @train_movement.train[:date]
     refute_nil @train_movement.train[:origin]
   end
-end 
+end

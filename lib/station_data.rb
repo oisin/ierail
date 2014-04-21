@@ -1,7 +1,8 @@
 class StationData
   attr_reader :server_time, :train_code, :station_name, :station_code,
               :status, :last_location, :due_in, :minutes_late, :minutes_early,
-              :train_type, :direction, :query_time, :train_date
+              :train_type, :direction, :query_time, :train_date, :expected_departure,
+              :expected_arrival, :scheduled_arrival, :scheduled_departure
 
   def initialize hash
     @server_time                = Time.parse hash['Servertime']
@@ -25,13 +26,13 @@ class StationData
     off_schedule_minutes        = hash['Late'].to_i
     @minutes_late               = off_schedule_minutes > 0 ? off_schedule_minutes : 0
     @minutes_early              = off_schedule_minutes < 0 ? -off_schedule_minutes : 0
-    
+
     # If train origin is station_name, then arrival times will be 00:00, so are adjusted to suit expected origin time.
     # Likewise if destination is station_name, departure times should suit expected destination time.
     # See: http://api.irishrail.ie/realtime/ Point 8
     is_departure_station        = @station_name.eql?(@origin)
     is_terminating_station      = @station_name.eql?(@destination)
-    
+
     @expected_arrival           = is_departure_station ? @origin_time : Time.parse(hash['Exparrival'])
     @expected_departure         = is_terminating_station ? @destination_time : Time.parse(hash['Expdepart'])
     @scheduled_arrival          = is_departure_station ? @origin_time + off_schedule_minutes : Time.parse(hash['Scharrival'])

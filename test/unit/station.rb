@@ -2,13 +2,18 @@ $:.unshift(File.join(File.dirname(__FILE__), '..','..', 'lib'))
 
 require_relative 'helper'
 
-require 'minitest/autorun'
-require 'ierail'
-
 class StationTest < MiniTest::Unit::TestCase
   def setup
     ir = IERail.new
-    @station = ir.stations.sample #Use a random station
+
+    VCR.configure do |c|
+      c.cassette_library_dir = 'fixtures/vcr_cassettes'
+      c.hook_into :webmock
+    end
+
+    VCR.use_cassette('stations') do
+      @station = ir.stations.sample #Use a random station
+    end
   end
 
   def test_that_a_station_has_a_description
