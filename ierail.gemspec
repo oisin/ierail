@@ -11,9 +11,9 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files`.split("\n")
   s.homepage    = 'http://rubygems.org/gems/ierail'
   s.add_runtime_dependency 'json', '~> 1.8', '>= 1.8.1'
-  s.add_runtime_dependency 'rest-client', '~> 1.6', '>= 1.6.7'
-  s.add_runtime_dependency 'nokogiri', '~> 1.6', '>= 1.6.1'
-  s.add_runtime_dependency 'tzinfo', '~> 1.1', '>= 1.1.0'
+  s.add_runtime_dependency 'rest-client', '~> 1.7', '>= 1.7.2'
+  s.add_runtime_dependency 'nokogiri', '~> 1.6', '>= 1.6.3'
+  s.add_runtime_dependency 'tzinfo', '~> 1.2', '>= 1.2.2'
   s.add_development_dependency 'vcr', '~> 2.9', '>= 2.9.0'
   s.add_development_dependency 'webmock', '~> 1.17', '>= 1.17.4'
   s.add_development_dependency 'timecop', '~> 0.6', '>= 0.6.2'
