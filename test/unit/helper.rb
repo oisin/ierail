@@ -8,6 +8,7 @@ require 'minitest/autorun'
 require 'ierail'
 
 def get_original_time(t)
+  t = Time.now if t.nil?
   @when = Time.parse(t.to_s)
   if TZInfo::Timezone.get('Europe/Dublin').current_period.dst?
     unless @when.zone == 'IST'
