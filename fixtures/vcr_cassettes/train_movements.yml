@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.irishrail.ie/realtime/realtime.asmx/getTrainMovementsXML?TrainDate=19/04/2014&TrainId=D288
+    uri: http://api.irishrail.ie/realtime/realtime.asmx/getTrainMovementsXML?TrainDate=19/04/2014&TrainId=D258
     body:
       encoding: US-ASCII
       string: ''
@@ -25,54 +25,70 @@ http_interactions:
       Server:
       - ''
       Date:
-      - Sat, 19 Apr 2014 18:10:56 GMT
+      - Mon, 05 Oct 2015 20:06:38 GMT
       Content-Length:
-      - '3678'
+      - '5013'
     body:
       encoding: UTF-8
       string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ArrayOfObjTrainMovements
         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"
         xmlns=\"http://api.irishrail.ie/realtime/\">\r\n  <objTrainMovements>\r\n
-        \   <TrainCode>D288 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <TrainCode>D258 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
         \   <LocationCode>CORK</LocationCode>\r\n    <LocationFullName>Cork</LocationFullName>\r\n
         \   <LocationOrder>1</LocationOrder>\r\n    <LocationType>O</LocationType>\r\n
-        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Midleton</TrainDestination>\r\n
-        \   <ScheduledArrival>00:00:00</ScheduledArrival>\r\n    <ScheduledDeparture>19:15:00</ScheduledDeparture>\r\n
-        \   <ExpectedArrival>00:00:00</ExpectedArrival>\r\n    <ExpectedDeparture>19:15:00</ExpectedDeparture>\r\n
+        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Cobh</TrainDestination>\r\n
+        \   <ScheduledArrival>00:00:00</ScheduledArrival>\r\n    <ScheduledDeparture>21:00:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>00:00:00</ExpectedArrival>\r\n    <ExpectedDeparture>21:00:00</ExpectedDeparture>\r\n
         \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
-        />\r\n    <StopType>C</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
-        \   <TrainCode>D288 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
+        \   <TrainCode>D258 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
         \   <LocationCode>LSLND</LocationCode>\r\n    <LocationFullName>LittleIsland</LocationFullName>\r\n
         \   <LocationOrder>2</LocationOrder>\r\n    <LocationType>S</LocationType>\r\n
-        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Midleton</TrainDestination>\r\n
-        \   <ScheduledArrival>19:21:30</ScheduledArrival>\r\n    <ScheduledDeparture>19:22:00</ScheduledDeparture>\r\n
-        \   <ExpectedArrival>19:21:30</ExpectedArrival>\r\n    <ExpectedDeparture>19:22:00</ExpectedDeparture>\r\n
+        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Cobh</TrainDestination>\r\n
+        \   <ScheduledArrival>21:06:30</ScheduledArrival>\r\n    <ScheduledDeparture>21:07:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>21:06:30</ExpectedArrival>\r\n    <ExpectedDeparture>21:07:00</ExpectedDeparture>\r\n
         \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
-        />\r\n    <StopType>N</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
-        \   <TrainCode>D288 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
+        \   <TrainCode>D258 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
         \   <LocationCode>GHANE</LocationCode>\r\n    <LocationFullName>Glounthaune</LocationFullName>\r\n
         \   <LocationOrder>3</LocationOrder>\r\n    <LocationType>S</LocationType>\r\n
-        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Midleton</TrainDestination>\r\n
-        \   <ScheduledArrival>19:24:30</ScheduledArrival>\r\n    <ScheduledDeparture>19:25:00</ScheduledDeparture>\r\n
-        \   <ExpectedArrival>19:24:30</ExpectedArrival>\r\n    <ExpectedDeparture>19:25:00</ExpectedDeparture>\r\n
+        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Cobh</TrainDestination>\r\n
+        \   <ScheduledArrival>21:09:30</ScheduledArrival>\r\n    <ScheduledDeparture>21:10:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>21:09:30</ExpectedArrival>\r\n    <ExpectedDeparture>21:10:00</ExpectedDeparture>\r\n
         \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
         />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
-        \   <TrainCode>D288 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
-        \   <LocationCode>CGTWL</LocationCode>\r\n    <LocationFullName>Carrigtwohill</LocationFullName>\r\n
+        \   <TrainCode>D258 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>FOTA</LocationCode>\r\n    <LocationFullName>Fota</LocationFullName>\r\n
         \   <LocationOrder>4</LocationOrder>\r\n    <LocationType>S</LocationType>\r\n
-        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Midleton</TrainDestination>\r\n
-        \   <ScheduledArrival>19:30:00</ScheduledArrival>\r\n    <ScheduledDeparture>19:30:30</ScheduledDeparture>\r\n
-        \   <ExpectedArrival>19:30:00</ExpectedArrival>\r\n    <ExpectedDeparture>19:30:30</ExpectedDeparture>\r\n
+        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Cobh</TrainDestination>\r\n
+        \   <ScheduledArrival>21:13:00</ScheduledArrival>\r\n    <ScheduledDeparture>21:13:30</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>21:13:00</ExpectedArrival>\r\n    <ExpectedDeparture>21:13:30</ExpectedDeparture>\r\n
         \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
         />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
-        \   <TrainCode>D288 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
-        \   <LocationCode>MDLTN</LocationCode>\r\n    <LocationFullName>Midleton</LocationFullName>\r\n
-        \   <LocationOrder>5</LocationOrder>\r\n    <LocationType>D</LocationType>\r\n
-        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Midleton</TrainDestination>\r\n
-        \   <ScheduledArrival>19:38:00</ScheduledArrival>\r\n    <ScheduledDeparture>00:00:00</ScheduledDeparture>\r\n
-        \   <ExpectedArrival>19:38:00</ExpectedArrival>\r\n    <ExpectedDeparture>00:00:00</ExpectedDeparture>\r\n
+        \   <TrainCode>D258 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>CGLOE</LocationCode>\r\n    <LocationFullName>Carrigaloe</LocationFullName>\r\n
+        \   <LocationOrder>5</LocationOrder>\r\n    <LocationType>S</LocationType>\r\n
+        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Cobh</TrainDestination>\r\n
+        \   <ScheduledArrival>21:17:00</ScheduledArrival>\r\n    <ScheduledDeparture>21:17:30</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>21:17:00</ExpectedArrival>\r\n    <ExpectedDeparture>21:17:30</ExpectedDeparture>\r\n
         \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
-        />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n</ArrayOfObjTrainMovements>"
+        />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
+        \   <TrainCode>D258 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>RBROK</LocationCode>\r\n    <LocationFullName>Rushbrooke</LocationFullName>\r\n
+        \   <LocationOrder>6</LocationOrder>\r\n    <LocationType>S</LocationType>\r\n
+        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Cobh</TrainDestination>\r\n
+        \   <ScheduledArrival>21:20:30</ScheduledArrival>\r\n    <ScheduledDeparture>21:21:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>21:20:30</ExpectedArrival>\r\n    <ExpectedDeparture>21:21:00</ExpectedDeparture>\r\n
+        \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
+        />\r\n    <StopType>-</StopType>\r\n  </objTrainMovements>\r\n  <objTrainMovements>\r\n
+        \   <TrainCode>D258 </TrainCode>\r\n    <TrainDate>19 Apr 2014</TrainDate>\r\n
+        \   <LocationCode>COBH</LocationCode>\r\n    <LocationFullName>Cobh</LocationFullName>\r\n
+        \   <LocationOrder>7</LocationOrder>\r\n    <LocationType>D</LocationType>\r\n
+        \   <TrainOrigin>Cork</TrainOrigin>\r\n    <TrainDestination>Cobh</TrainDestination>\r\n
+        \   <ScheduledArrival>21:24:00</ScheduledArrival>\r\n    <ScheduledDeparture>00:00:00</ScheduledDeparture>\r\n
+        \   <ExpectedArrival>21:24:00</ExpectedArrival>\r\n    <ExpectedDeparture>00:00:00</ExpectedDeparture>\r\n
+        \   <Arrival />\r\n    <Departure />\r\n    <AutoArrival />\r\n    <AutoDepart
+        />\r\n    <StopType>C</StopType>\r\n  </objTrainMovements>\r\n</ArrayOfObjTrainMovements>"
     http_version: 
-  recorded_at: Sat, 19 Apr 2014 18:10:58 GMT
-recorded_with: VCR 2.9.0
+  recorded_at: Mon, 05 Oct 2015 20:06:38 GMT
+recorded_with: VCR 2.9.3
