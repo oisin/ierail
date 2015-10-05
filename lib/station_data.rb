@@ -33,8 +33,16 @@ class StationData
     is_departure_station        = @station_name.eql?(@origin)
     is_terminating_station      = @station_name.eql?(@destination)
 
+    one_day = 86400
+
     @expected_arrival           = is_departure_station ? @origin_time : Time.parse(hash['Exparrival'])
     @expected_departure         = is_terminating_station ? @destination_time : Time.parse(hash['Expdepart'])
+
+    # The API returns expected arr/dep times as HH:MM, if this time has crossed midnight, we parse it as being
+    # earlier 'today'; this then throws off the before/after filters. Use the server time as a sanity check.
+    @expected_arrival = @expected_arrival + one_day if @expected_arrival < @server_time
+    @expected_departure = @expected_departure + one_day if @expected_departure < @server_time
+
     @scheduled_arrival          = is_departure_station ? @origin_time + off_schedule_minutes : Time.parse(hash['Scharrival'])
     @scheduled_departure        = is_terminating_station ? @destination_time + off_schedule_minutes : Time.parse(hash['Schdepart'])
     @direction                  = hash['Direction']

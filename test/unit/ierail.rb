@@ -51,7 +51,7 @@ class IERailTest < MiniTest::Unit::TestCase
         thirty_mins = Time.now + (60 * 30)
         time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
         before_train = @ir.southbound_from('Dublin Connolly').before(time).sample
-        assert before_train.expected_departure <= thirty_mins
+        assert before_train.expected_arrival <= thirty_mins
       end
     end
   end
@@ -65,7 +65,7 @@ class IERailTest < MiniTest::Unit::TestCase
         thirty_mins = Time.now + (60 * 30)
         time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
         after_train = @ir.southbound_from('Dublin Connolly').after(time).sample
-        assert after_train.expected_departure >= thirty_mins
+        assert after_train.expected_arrival >= thirty_mins
       end
     end
   end
@@ -79,7 +79,6 @@ class IERailTest < MiniTest::Unit::TestCase
         thirty_mins = Time.now + (60 * mins)
         time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
         southbounds = @ir.southbound_from('Dublin Connolly')
-
         before_train = southbounds.before(time)
 
         in_half_an_hour = southbounds.in(mins)
