@@ -2,7 +2,7 @@ require 'date'
 
 Gem::Specification.new do |s|
   s.name        = 'ierail'
-  s.version     = '0.4.0'
+  s.version     = '0.4.1'
   s.date        = Date.today.to_s
   s.summary     = "Irish Rail Train Schedule and Status API"
   s.description = "Irish Rail Train Schedule and Status API"
