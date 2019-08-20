@@ -3,7 +3,7 @@ require 'coveralls'
 require 'tzinfo'
 require 'vcr'
 require 'timecop'
-require 'time'
+require 'date'
 require 'minitest/autorun'
 require 'ierail'
 
@@ -21,8 +21,8 @@ def get_original_time(t)
   @when
 end
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::HTMLFormatter,
   Coveralls::SimpleCov::Formatter
-]
+])
 SimpleCov.start

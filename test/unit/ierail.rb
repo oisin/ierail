@@ -2,7 +2,7 @@ $:.unshift(File.join(File.dirname(__FILE__), '..','..', 'lib'))
 
 require_relative 'helper'
 
-class IERailTest < MiniTest::Unit::TestCase
+class IERailTest < Minitest::Test
   def setup
     @ir = IERail.new
 
@@ -59,12 +59,15 @@ class IERailTest < MiniTest::Unit::TestCase
   def test_that_the_after_time_constraint_works
     VCR.use_cassette('southbound') do |cassette|
       time = get_original_time(cassette.originally_recorded_at)
-
+      puts("\n--> original time = #{time.to_i}   #{time.to_s}")
       Timecop.freeze(time || Time.now) do
         #Thirty minutes from now
         thirty_mins = Time.now + (60 * 30)
+        puts("--> thirty_mins from now = #{thirty_mins.to_i}   #{thirty_mins.to_s}")
         time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
         after_train = @ir.southbound_from('Dublin Connolly').after(time).sample
+        puts after_train.inspect
+        puts("--> after train expected arrival = #{after_train.expected_arrival.to_i}   #{after_train.expected_arrival.to_s}")
         assert after_train.expected_arrival >= thirty_mins
       end
     end
@@ -124,10 +127,10 @@ class IERailTest < MiniTest::Unit::TestCase
   end
 
   def test_that_station_times_equivalent_to_in
-    VCR.use_cassette('station_times') do |cassette|
+    VCR.use_cassette('station_times') do 
       trains = @ir.station_times('Dublin Connolly', 30)
 
-      VCR.use_cassette('station') do |cassette|
+      VCR.use_cassette('station') do 
         in_half_an_hour = @ir.station('Dublin Connolly').in(30)
 
         assert_equal trains.count, in_half_an_hour.count
@@ -139,7 +142,7 @@ class IERailTest < MiniTest::Unit::TestCase
   end
 
   def test_that_found_station_is_a_struct_with_name_description_code
-    VCR.use_cassette('find_station') do |cassette|
+    VCR.use_cassette('find_station') do 
       station = @ir.find_station('Dublin Connolly').sample
       assert_equal station.class, Struct::Station
       refute_nil station.name

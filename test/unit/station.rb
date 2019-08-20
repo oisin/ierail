@@ -2,7 +2,7 @@ $:.unshift(File.join(File.dirname(__FILE__), '..','..', 'lib'))
 
 require_relative 'helper'
 
-class StationTest < MiniTest::Unit::TestCase
+class StationTest < Minitest::Test
   def setup
     ir = IERail.new
 

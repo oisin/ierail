@@ -18,9 +18,11 @@ class IERail
     attr_reader :result
     
     def initialize(url, array_name, object_name)
-      @ws_url = URI.encode(url)
+      @ws_url = url.gsub(' ', '%20')
       @ws_array_name = array_name.downcase
       @ws_object_name = object_name.downcase
+      @result = nil
+      @current = nil
     end
       
     def response
@@ -168,7 +170,10 @@ class IERail
   #
   def find_station(partial)
     ier = IERailGet.new("getStationsFilterXML?StationText=#{partial}", "ArrayOfObjStationFilter", "objStationFilter")
-    Struct.new("Station", :name, :description, :code)
+    
+    unless defined?(Struct::Station)
+        Struct.new("Station", :name, :description, :code)
+    end
     
     ier.response.map do |st|
        Struct::Station.new(st['StationDesc_sp'],

@@ -2,7 +2,7 @@ $:.unshift(File.join(File.dirname(__FILE__), '..','..', 'lib'))
 
 require_relative 'helper'
 
-class StationDataTest < MiniTest::Unit::TestCase
+class StationDataTest < Minitest::Test
   def setup
     ir = IERail.new
     
@@ -27,10 +27,6 @@ class StationDataTest < MiniTest::Unit::TestCase
   def test_that_there_is_a_station_name_and_code
     refute_empty @station_data.name
     refute_empty @station_data.code
-  end
-
-  def test_that_there_is_a_query_time
-    refute_nil @station_data.query_time
   end
 
   def test_that_there_is_a_status
