@@ -1,7 +1,5 @@
-[![Build Status](https://travis-ci.org/oisin/ierail.png?branch=master)](https://travis-ci.org/oisin/ierail)
 [![Coverage Status](https://coveralls.io/repos/oisin/ierail/badge.png?branch=master)](https://coveralls.io/r/oisin/ierail)
 [![Gem Version](https://badge.fury.io/rb/ierail.png)](http://badge.fury.io/rb/ierail)
-[![Dependency Status](https://gemnasium.com/oisin/ierail.svg)](https://gemnasium.com/oisin/ierail)
 [![Code Climate](https://codeclimate.com/github/oisin/ierail/badges/gpa.svg)](https://codeclimate.com/github/oisin/ierail)
 
 ## Irish Rail API Ruby Wrapper
