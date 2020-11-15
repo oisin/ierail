@@ -25,6 +25,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::HTMLFormatter,
   Coveralls::SimpleCov::Formatter
 ])
+
 SimpleCov.start do
-  enable_coverage: :branch
+  enable_coverage :branch
 end
