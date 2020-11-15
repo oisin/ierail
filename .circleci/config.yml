@@ -13,4 +13,6 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
-      - run: rake test  
+      - run: 
+          name: Run unit tests
+          command: rake test  
