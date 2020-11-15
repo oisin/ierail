@@ -2,5 +2,6 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'coveralls', require: false
+gem 'simplecov', require: false, group: :test
+gem 'coveralls', require: false, group: :test
 gem 'rake'
