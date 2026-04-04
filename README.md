@@ -3,7 +3,7 @@
 
 I wrote most of this on the train, as is appropriate.
 
-It's a trivial wrapper for the Irish Rail real time (whut?) train times system, in Ruby. It uses the HTTP GET API that was thankfully supplied along with the more *interesting* SOAP API, so a tiddly simple set up with [RestClient](https://github.com/archiloque/rest-client) and [Nokogiri](http://nokogiri.org/) (two of my favourite things ever) to pull and process the XML data into Hashes for great value.
+It's a trivial wrapper for the Irish Rail real time (whut?) train times system, in Ruby. It uses the HTTP GET API that was thankfully supplied along with the more *interesting* SOAP API, so a straightforward set up with [RestClient](https://github.com/archiloque/rest-client) and [Nokogiri](http://nokogiri.org/) to pull and process the XML data into Hashes.
 
 ## Usage
 
@@ -108,7 +108,4 @@ As the API functionality is highly time dependent, Timecop is used to set/freeze
 
 ---
 
-Pull requests welcome, because there's damn all in it at the moment. Please accompany the pull request with an appropriate test, and if you can, an example here in the README.
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/oisin/ierail/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Pull requests welcome. Please accompany the pull request with an appropriate test, and if you can, an example here in the README.
