@@ -2,7 +2,7 @@ require 'date'
 
 Gem::Specification.new do |s|
   s.name        = 'ierail'
-  s.version     = '0.4.2'
+  s.version     = '0.5.0'
   s.date        = Date.today.to_s
   s.summary     = "Irish Rail Train Schedule and Status API"
   s.description = "Irish Rail Train Schedule and Status API"
@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.email       = 'oisin.hurley@gmail.com'
   s.files       = `git ls-files`.split("\n")
   s.homepage    = 'http://rubygems.org/gems/ierail'
+  s.required_ruby_version = ">=3.3.0"
   s.add_runtime_dependency 'json', "~> 2", ">= 2.12.2"
   s.add_runtime_dependency 'rest-client', "~> 2", ">= 2.1.0"
   s.add_runtime_dependency 'nokogiri', "~> 1", ">= 1.18.8"
