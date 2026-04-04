@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rest-client'
 require 'nokogiri'
 require 'uri'
@@ -10,13 +12,13 @@ require 'train_movement'
 require 'core_ext'
 
 class IERail
-  
+
   URL = "http://api.irishrail.ie/realtime/realtime.asmx"
-  
+
   class IERailGet < Nokogiri::XML::SAX::Document
-    
+
     attr_reader :result
-    
+
     def initialize(url, array_name, object_name)
       @ws_url = url.gsub(' ', '%20')
       @ws_array_name = array_name.downcase
@@ -24,7 +26,7 @@ class IERail
       @result = nil
       @current = nil
     end
-      
+
     def response
       unless @result
         parser = Nokogiri::XML::SAX::Parser.new(self)
@@ -33,27 +35,27 @@ class IERail
       @result
     end
 
-    def start_document 
+    def start_document
       @result = []
     end
-    
+
     def characters string
-      string.strip!
-      @result.last[@current] << string unless string.empty?
+      str = string.strip
+      @result.last[@current] << str unless str.empty?
     end
-    
+
     def start_element name, attrs = []
       case name.downcase
-        when @ws_object_name 
+        when @ws_object_name
           @result << Hash.new
         when @ws_array_name
           ;
         else
-          @current = name          
-          @result.last[@current] = ""
+          @current = name
+          @result.last[@current] = String.new("")
       end
     end
-    
+
     def end_element name
       if @current && @result.last[@current].empty?
         @result.last.delete(@current)
@@ -61,7 +63,7 @@ class IERail
       @current = nil
     end
   end
-  
+
   # Get ALL the stations!
   # Returns array of Station objects, and each object responds to
   # {
@@ -74,10 +76,10 @@ class IERail
   #
   def stations
     ier = IERailGet.new("getAllStationsXML?", "arrayofobjstation", "objstation")
-    
+
     ier.response.map { |s| Station.new(s) }
   end
-  
+
   # Get ALL the trains! That are on the go at the moment.
   # Returns array of Train objects, and each object responds to
   #  {
@@ -92,10 +94,10 @@ class IERail
   #
   def trains
     ier = IERailGet.new("getCurrentTrainsXML?", "arrayofobjtrainpositions", "objtrainpositions")
-    
+
     ier.response.map { |t| Train.new(t) }
   end
-  
+
   # Get train information for a particular station, by station name. This gives data on trains thru that station
   # Returns array of StationData objects, and each object responds to
   # {
@@ -124,21 +126,21 @@ class IERail
   #
   def station(name)
     ier = IERailGet.new("getStationDataByNameXML?StationDesc=#{name}", "arrayofobjstationdata", "objstationdata")
-    
+
     ier.response.map { |sd| StationData.new(sd) }
   end
-  
-  # Get train information for a particular station, by station name, within the time period in minutes from now. 
+
+  # Get train information for a particular station, by station name, within the time period in minutes from now.
   # This gives data on trains thru that station.
   # Returns array of StationData objects, and each obj looks like the one for IERail#station
   # Will return an empty array if no information.
   #
   def station_times(name, mins)
     ier = IERailGet.new("getStationDataByNameXML_withNumMins?StationDesc=#{name}&NumMins=#{mins}", "arrayofobjstationdata", "objstationdata")
-    
+
     ier.response.map { |sd| StationData.new(sd) }
   end
-  
+
   # Get the movements of a particular train, by train code, on a date.
   #  If no date is supplied assume train has run/is running today.
   #
@@ -155,10 +157,10 @@ class IERail
   #
   def train_movements(code, date=Time.now)
     ier = IERailGet.new("getTrainMovementsXML?TrainId=#{code}&TrainDate=#{date.strftime("%d/%m/%Y")}", "ArrayOfObjTrainMovements", "ObjTrainMovements")
-    
+
     ier.response.map{ |tm| TrainMovement.new(tm) }
   end
-  
+
   # Find station codes and descriptions using a partial string to match the station name
   # Returns an array of Structs that each respond to
   # {
@@ -170,11 +172,11 @@ class IERail
   #
   def find_station(partial)
     ier = IERailGet.new("getStationsFilterXML?StationText=#{partial}", "ArrayOfObjStationFilter", "objStationFilter")
-    
+
     unless defined?(Struct::Station)
         Struct.new("Station", :name, :description, :code)
     end
-    
+
     ier.response.map do |st|
        Struct::Station.new(st['StationDesc_sp'],
                            st['StationDesc'],
@@ -194,7 +196,7 @@ class IERail
       direction = name.to_s.split('_').first.capitalize
 
       ier = IERailGet.new("getStationDataByNameXML?StationDesc=#{args.first}", "arrayofobjstationdata", "objstationdata")
-     
+
       ier.response.select { |sd| sd['Direction'] == direction }.map { |sd| StationData.new(sd) }
     end
   end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class StationData
   attr_reader :server_time, :train_code, :station_name, :station_code,
               :status, :last_location, :due_in, :minutes_late, :minutes_early,
