@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.email       = 'oisin.hurley@gmail.com'
   s.files       = `git ls-files`.split("\n")
   s.homepage    = 'http://rubygems.org/gems/ierail'
+  s.licenses    = ["BSD 2-Clause 'Simplified' License"]
   s.required_ruby_version = ">=3.3.0"
   s.add_runtime_dependency 'json', "~> 2", ">= 2.12.2"
   s.add_runtime_dependency 'rest-client', "~> 2", ">= 2.1.0"
