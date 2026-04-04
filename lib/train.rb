@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Train
   attr_reader :status, :code, :date, :message, :direction
 

@@ -1,10 +1,7 @@
-[![Coverage Status](https://coveralls.io/repos/oisin/ierail/badge.png?branch=master)](https://coveralls.io/r/oisin/ierail)
-[![Gem Version](https://badge.fury.io/rb/ierail.png)](http://badge.fury.io/rb/ierail)
-[![Code Climate](https://codeclimate.com/github/oisin/ierail/badges/gpa.svg)](https://codeclimate.com/github/oisin/ierail)
 
 ## Irish Rail API Ruby Wrapper
 
-I wrote most of this on the train, as is appropriate. 
+I wrote most of this on the train, as is appropriate.
 
 It's a trivial wrapper for the Irish Rail real time (whut?) train times system, in Ruby. It uses the HTTP GET API that was thankfully supplied along with the more *interesting* SOAP API, so a tiddly simple set up with [RestClient](https://github.com/archiloque/rest-client) and [Nokogiri](http://nokogiri.org/) (two of my favourite things ever) to pull and process the XML data into Hashes for great value.
 
@@ -101,7 +98,7 @@ Check the [main.rb](main.rb) for additional usage.
 
 ### Testing
 
-Rather than having the test suite hit the API, this project is using [VCR](https://github.com/vcr/vcr) alongside [Timecop](https://github.com/travisjeffery/timecop) to use stubbed responses.  
+Rather than having the test suite hit the API, this project is using [VCR](https://github.com/vcr/vcr) alongside [Timecop](https://github.com/travisjeffery/timecop) to use stubbed responses.
 These responses are stored in the `fixtures/vcr_cassettes` directory and can be updated by running
 
 1. `rm -r fixtures`
@@ -115,4 +112,3 @@ Pull requests welcome, because there's damn all in it at the moment. Please acco
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/oisin/ierail/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

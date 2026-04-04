@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 $:.unshift(File.join(File.dirname(__FILE__), '..','..', 'lib'))
 
 require_relative 'helper'
@@ -14,7 +15,7 @@ class IERailTest < Minitest::Test
 
   def test_that_the_train_directions_are_correct
     VCR.use_cassette('northbound') do |cassette|
-      time = get_original_time(cassette.originally_recorded_at)
+      time = helper_get_original_time(cassette.originally_recorded_at)
 
       Timecop.freeze(time || Time.now) do
         northbound_train = @ir.northbound_from('Dublin Connolly').sample
@@ -22,7 +23,7 @@ class IERailTest < Minitest::Test
       end
     end
     VCR.use_cassette('northbound') do |cassette|
-      time = get_original_time(cassette.originally_recorded_at)
+      time = helper_get_original_time(cassette.originally_recorded_at)
 
       Timecop.freeze(time || Time.now) do
         southbound_train = @ir.southbound_from('Dublin Connolly').sample
@@ -33,7 +34,7 @@ class IERailTest < Minitest::Test
 
   def test_that_an_empty_array_is_returned_when_no_data
     VCR.use_cassette('westbound') do |cassette|
-      time = get_original_time(cassette.originally_recorded_at)
+      time = helper_get_original_time(cassette.originally_recorded_at)
 
       Timecop.freeze(time || Time.now) do
         nonexistant = @ir.westbound_from('Clongriffin')
@@ -44,38 +45,27 @@ class IERailTest < Minitest::Test
 
   def test_that_the_before_time_constraint_works
     VCR.use_cassette('northbound') do |cassette|
-      time = get_original_time(cassette.originally_recorded_at)
-
+      time = helper_get_original_time(cassette.originally_recorded_at)
       Timecop.freeze(time || Time.now) do
-        #Thirty minutes from now
-        thirty_mins = Time.now + (60 * 30)
-        time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
-        before_train = @ir.southbound_from('Dublin Connolly').before(time).sample
-        assert before_train.expected_arrival <= thirty_mins
+        before_train = @ir.southbound_from('Dublin Connolly').before(helper_get_thirty_mins()).sample
+        assert before_train.expected_arrival.to_i - before_train.server_time.to_i  < (30 * 60)
       end
     end
   end
 
   def test_that_the_after_time_constraint_works
     VCR.use_cassette('southbound') do |cassette|
-      time = get_original_time(cassette.originally_recorded_at)
-      puts("\n--> original time = #{time.to_i}   #{time.to_s}")
+      time = helper_get_original_time(cassette.originally_recorded_at)
       Timecop.freeze(time || Time.now) do
-        #Thirty minutes from now
-        thirty_mins = Time.now + (60 * 30)
-        puts("--> thirty_mins from now = #{thirty_mins.to_i}   #{thirty_mins.to_s}")
-        time = "#{thirty_mins.hour}:#{thirty_mins.min}" # "HH:MM"
-        after_train = @ir.southbound_from('Dublin Connolly').after(time).sample
-        puts after_train.inspect
-        puts("--> after train expected arrival = #{after_train.expected_arrival.to_i}   #{after_train.expected_arrival.to_s}")
-        assert after_train.expected_arrival >= thirty_mins
+        after_train = @ir.southbound_from('Dublin Connolly').after(helper_get_thirty_mins()).sample
+        assert after_train.expected_arrival.to_i - after_train.server_time.to_i  >= (30 * 60)
       end
     end
   end
 
   def test_that_the_in_constraint_works
     VCR.use_cassette('southbound_from') do |cassette|
-      time = get_original_time(cassette.originally_recorded_at)
+      time = helper_get_original_time(cassette.originally_recorded_at)
 
       Timecop.freeze(time || Time.now) do
         mins = 30
@@ -95,7 +85,7 @@ class IERailTest < Minitest::Test
 
   def test_station_times
     VCR.use_cassette('station_times') do |cassette|
-      time = get_original_time(cassette.originally_recorded_at)
+      time = helper_get_original_time(cassette.originally_recorded_at)
 
       Timecop.freeze(time || Time.now) do
         station_data = @ir.station_times('Dublin Connolly',30).sample
@@ -106,7 +96,7 @@ class IERailTest < Minitest::Test
 
   def test_find_station
     VCR.use_cassette('find_station') do |cassette|
-      time = get_original_time(cassette.originally_recorded_at)
+      time = helper_get_original_time(cassette.originally_recorded_at)
 
       Timecop.freeze(time || Time.now) do
         station = @ir.find_station('Dublin Connolly').sample
@@ -117,7 +107,7 @@ class IERailTest < Minitest::Test
 
   def test_that_station_times_returns_station_data
     VCR.use_cassette('station_times') do |cassette|
-      time = get_original_time(cassette.originally_recorded_at)
+      time = helper_get_original_time(cassette.originally_recorded_at)
 
       Timecop.freeze(time || Time.now) do
         train = @ir.station_times('Dublin Connolly', 30).sample #random train in next 30 mins
@@ -127,10 +117,10 @@ class IERailTest < Minitest::Test
   end
 
   def test_that_station_times_equivalent_to_in
-    VCR.use_cassette('station_times') do 
+    VCR.use_cassette('station_times') do
       trains = @ir.station_times('Dublin Connolly', 30)
 
-      VCR.use_cassette('station') do 
+      VCR.use_cassette('station') do
         in_half_an_hour = @ir.station('Dublin Connolly').in(30)
 
         assert_equal trains.count, in_half_an_hour.count
@@ -142,7 +132,7 @@ class IERailTest < Minitest::Test
   end
 
   def test_that_found_station_is_a_struct_with_name_description_code
-    VCR.use_cassette('find_station') do 
+    VCR.use_cassette('find_station') do
       station = @ir.find_station('Dublin Connolly').sample
       assert_equal station.class, Struct::Station
       refute_nil station.name

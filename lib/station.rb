@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Station
   attr_reader :description, :code, :id
 
